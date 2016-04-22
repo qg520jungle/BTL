@@ -38,10 +38,9 @@ li {
   margin: 0;
 }
 .g-head{
-  height:68px;
   min-width: 1200px;
   width: 100%;
-  background-color: @main-b2;
+  background-color: #c90028;
   position: fixed;
   top:0;
   left:0;
@@ -55,15 +54,22 @@ li {
 .g-foot{
 
 }
-.m-logo{
-  float: left;
-  text-align: center;
+.m-operate{
+  height: 32px;
+  background-color: #dfdee3;
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
+  }
+  li{
+    float: left;
+  }
 }
+
 .m-nav{
-  float:left;
   ul{
-    margin-top:25px;
-    margin-left: 12px;
   }
   li{
     float:left;
@@ -71,20 +77,18 @@ li {
   a{
     display: block;
     text-align: center;
-    height: 43px;
-    line-height: 43px;
+    height: 82px;
+    line-height: 82px;
     width: 88px;
-    background-color: @main-b2;
+    background-color: #c90028;
     color:#fff;
     font-size: 14px;
     &:hover{
-      background-color: @main-b;
-      border-radius: 5px 5px 0 0;
+      background-color: #ff9000;
     }
   }
   .z-active{
-    background-color: @main-b;
-    border-radius: 5px 5px 0 0;
+    background-color: #ff9000;
   }
 }
 .m-login{
@@ -146,14 +150,14 @@ li {
 .m-side{
   position: absolute;
   left: 0;
-  width: 160px;
+  width: 200px;
   background-color: @side;
   height: 100%;
   ul{
     border-bottom: 1px solid @side-li;
     position: fixed;
     left: 0;
-    top: 68px;
+    top: 114px;
   }
   li{
     border-top: 1px solid #38383d;
@@ -161,7 +165,7 @@ li {
   }
   a{
     display: inline-block;
-    width: 160px;
+    width: 200px;
     height: 55px;
     line-height: 55px;
     color:#fff;
@@ -207,11 +211,11 @@ li {
   /*margin-left: 160px;*/
 }
 .m-crumb{
-  margin-top: 68px;
+  margin-top: 114px;
   height: 40px;
   line-height: 40px;
   background-color: #f3f2fe;
-  margin-left: 160px;
+  margin-left: 200px;
   padding-left: 20px;
   color:#b6b6b7;
   span{
@@ -234,7 +238,7 @@ li {
 .m-wrap{
   background-color: #fff;
   margin-top: 10px;
-  margin-left: 172px;
+  margin-left: 214px;
   margin-bottom: 20px;
  /* padding-bottom: 20px;*/
   margin-right: 10px;
