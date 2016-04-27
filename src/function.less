@@ -32,6 +32,9 @@
 .f-hd {
   display: none;
 }
+.f-dn {
+  display: none;
+}
 .f-ib {
   display: inline-block;
   *display:inline;
@@ -46,11 +49,17 @@
 .f-mb30 {
   margin-bottom: 30px;
 }
+.f-mr7{
+  margin-right: 7px;
+}
 .f-wrap {
   padding: 0 45px;
 }
 .f-wrap-re {
   padding: 15px 0;
+}
+.f-of-x{
+  overflow-x: scroll;
 }
 .f-mb-mg {
   margin-left: -15px;
@@ -129,4 +138,17 @@ textarea, input[type=text], input[type=password], input[type=datetime], input[ty
     left: 6px;
     top: 3px;
     background-color: #fff;
-  }
+}
+.arrow (@tot: transparent;@tor: transparent;@tob: transparent;@tol: transparent;@w: 10px; ){
+  position: absolute;
+  border-bottom-color: @tot;
+  border-top-color: @tob;
+  border-left-color: @tor;
+  border-right-color: @tol;
+  border-width: @w;
+  content: " ";
+  border-style: solid;
+  display: block;
+  height: 0;
+  width: 0;
+}

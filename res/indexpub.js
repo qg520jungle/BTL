@@ -1,0 +1,27 @@
+(function(){
+//退出系统
+$('.j-login').on('mouseover',function(){
+  $('.j-login-pop').show();
+});
+$('.j-login').on('mouseout',function(){
+  $('.j-login-pop').hide();
+});
+
+//侧边栏的交互
+$('.j-s1').on('click',function(){
+  if($(this).hasClass('z-active')){
+	$(this).removeClass('z-active');
+	$(this).parent().find('.j-side-snd').hide()
+  }else{      
+	$(this).addClass('z-active');
+	$(this).parent().find('.j-side-snd').show()
+  }
+});
+$('.j-s2').on('click',function(){
+  if($(this).hasClass('z-active')){
+  }else{      
+	$('.j-s2').removeClass('z-active');
+	$(this).addClass('z-active');
+  }
+});
+})()

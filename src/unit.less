@@ -10,6 +10,14 @@
   padding-left: 10px;
   vertical-align: middle;
 }
+.u-label{
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  padding-left: 10px;
+  vertical-align: middle;
+}
 .form-group label {
     font-size: 18px;
     font-weight: 400;
@@ -30,7 +38,7 @@
   width: 886px;
 }
 .u-input-small{
-  width: 98px;
+  width: 80px;
 }
 .u-input-normal-s{
   width: 118px;
@@ -52,6 +60,23 @@
     padding-left: 50px;
   }
 
+}
+
+.u-input-time{
+  width: 110px;
+}
+.u-input-time-s{
+  padding-left: 5px;
+  width: 80px;
+}
+.u-input-time-l{
+  width: 150px;
+}
+.u-select-normal{
+  width: 145px;
+}
+.u-select-large{
+  width: 190px;
 }
 .u-page{
     height: 37px;
@@ -106,9 +131,13 @@
   padding-left: 10px;
   border-radius: 5px;
   vertical-align: text-top;
-}
-.u-textarea-l{
-  width: 480px;
+  &.l{
+    width: 750px;
+    height: 150px;
+  }
+  &.s{
+    height: 50px;
+  }
 }
 
 .u-input-largearea{
@@ -140,17 +169,17 @@
   .f-db{
     display: block;
   }
+  .f-hd{
+    display: none;
+  }
   dt.normal{
     width:75px;
   }
   dt.large{
     width:100px;
   }
-  dt.verylarge{
-    width:120px;
-  }
-  dt.tolarge{
-    width:160px;
+  dt.c1{
+    width: 120px;
   }
   .btn-s{
     margin-left: 10px;

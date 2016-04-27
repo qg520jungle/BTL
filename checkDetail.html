@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" id="viewport" content="width=400">
+  <meta name="keywords" content="双月审核" />
+  <meta name="description" content="双月审核" />
+  <title>双月审核</title>
+  <!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="res/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="res/fonts/fonts.googleapis.com.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="res/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+  <link href="res/bootstrap.css" rel="stylesheet">
+  <link href="res/btl-global.css" rel="stylesheet">
+
+  <script src="lib/jquery.js"></script>
+  <!--[if lte IE 9]>
+  <script src="lib/respond.min.js"></script>
+  <script src="lib/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="res/bootstrap.min.js"></script>
+  <!--<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />-->
+  <!--<link href="favicon.ico" rel="bookmark icon" />-->
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="res/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="res/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="res/js/ace-extra.min.js"></script>
+<!--  时间所需的文件-->
+ <link rel="stylesheet" href="res/css/bootstrap-datetimepicker.min.css">
+ <script src="lib/bootstrap-datetimepicker.js"></script>
+ <script src="lib/bootstrap-datetimepicker.fr.js"></script>
+
+</head>
+<body>
+  <div class="g-head f-cb">
+    <div class="m-operate f-cb">
+      <div class="left">
+        欢迎来到东风日产BTL商城车展系统!
+      </div>
+      <div class="right">
+        <ul class="f-cb operate">
+          <li>商城首页</li>
+          <li>导航页</li>
+          <li>修改密码</li>
+          <li>刷新</li>
+          <li>退出</li>
+          <li>
+               <div class="j-login f-fr">
+      <i class="u-icon "></i>
+      <span class="host">用户名</span>
+      <i class="u-icon-down"></i>
+      <div class="m-login-pop j-login-pop">
+        <ul>
+          <li><a href="" class="u-press">修改密码</a></li>
+          <li><a href="" class="u-press">退出系统</a></li>
+        </ul>
+      </div>
+      </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="m-nav">
+      <ul class="f-cb">
+        <li><a href="###">平台首页</a></li>
+        <li><a href="###" class="z-active">站点申报</a></li>
+        <li><a href="###">配置管理</a></li>
+        <li><a href="###">系统管理</a></li>
+        <li><a href="###">国际站点管理</a></li>
+        <li><a href="###">数据库管理</a></li>
+      </ul>
+    </div>
+ </div>
+  <div class="g-body f-cb">
+
+    <div class="m-main">
+      <div class="m-side">
+      <ul class="side-main j-side-main">
+        <li>
+          <a href="###" class="f-pr z-active j-s1"><i class=" iconfont chading"></i><span class="tab">年度申请</span><div class="u-arrow-direct"></div></a>
+          <ul class="side-snd j-side-snd">
+            <li>
+              <a href="###" class="f-pr z-active j-s2"><i class=" iconfont chading"></i><span class="tab">线路调整</span><div class="u-arrow-right"></div></a>
+            </li>
+            <li>
+              <a href="###" class="f-pr j-s2"><i class=" iconfont chading"></i><span class="tab">年度线路发布</span><div class="u-arrow-right"></div></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="###" class="f-pr z-active j-s1"><i class=" iconfont chading"></i><span class="tab">双月申请</span><div class="u-arrow-direct"></div></a>
+          <ul class="side-snd j-side-snd">
+            <li>
+              <a href="###" class="f-pr j-s2"><i class=" iconfont chading"></i><span class="tab">线路调整</span><div class="u-arrow-right"></div></a>
+            </li>
+            <li>
+              <a href="###" class="f-pr j-s2"><i class=" iconfont chading"></i><span class="tab">年度线路发布</span><div class="u-arrow-right"></div></a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="###" class="f-pr  j-s1"><i class=" iconfont chading"></i><span class="tab">进度管理</span><div class="u-arrow-right"></div></a></li>
+        <li><a href="###" class="f-pr  j-s1"><i class=" iconfont chading"></i><span class="tab">满意度评价</span><div class="u-arrow-right"></div></a></li>
+        <li><a href="###" class="f-pr  j-s1"><i class=" iconfont chading"></i><span class="tab">站点日志</span><div class="u-arrow-right"></div></a></li>
+      </ul>
+    </div>
+      <div class="m-crumb">
+        <i class="u-icon u-icon-location "></i><span>您所在的位置：</span><a href="###">双月申请</a><span class="s-ff-c"> > </span><a href="###" class="z-active">双月审核</a><span class="s-ff-c"> > </span><a href="###" class="z-active">查看详情</a>
+      </div>
+      <div class="m-display">
+        <div class="m-wrap">
+          <div class="m-t">
+            <span>专营店信息</span>
+          </div>
+          <div class="m-c">
+           <div class="m-input-box info f-cb">
+            <dl class="u-dl">
+                <dt class="large c1">地区：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-normal">
+                </dd>
+            </dl>
+            <dl class="u-dl">
+                <dt class="large">大区：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-normal">
+                </dd>
+            </dl>
+            <dl class="u-dl">
+                <dt class="large">小区：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-normal">
+                </dd>
+            </dl>
+            <dl class="u-dl">
+                <dt class="large">城市：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-normal">
+                </dd>
+            </dl>
+            <dl class="u-dl">
+                <dt class="large c1"><span class="s-red">*</span>日产主担专营店：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-normal">
+                </dd>
+            </dl>
+            <dl class="u-dl">
+                <dt class="large"><span class="s-red">*</span>电话：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-normal">
+                </dd>
+            </dl>
+            <dl class="u-dl">
+                <dt class="large"><span class="s-red">*</span>邮件：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-normal">
+                </dd>
+            </dl>
+            </div>
+            <div class="f-mb30">
+              <dl class="u-dl">
+                <dt class="large c1">协办类型：</dt>
+                <dd class="m-radio-box">
+                  <label class=""><input type="radio" name="coType" class="u-input  j-radio-co" xg-co="0" checked>日产启辰联合</label>
+                  <label class=""><input type="radio" name="coType" class="u-input  j-radio-co" xg-co="1">日产</label>
+                  <label class=""><input type="radio" name="coType" class="u-input  j-radio-co" xg-co="2">启辰</label>
+                </dd>
+            </dl>
+            <div class="j-show">
+              <dl class="u-dl "  xg-co="0">
+                  <dt class="large c1">日产启辰联合：</dt>
+                  <dd >
+                    <input type="text" xg-co-input="1" class="u-input u-input-normal"><span class="u-btn btn btn-small" xg-type="1"  data-toggle="modal" data-target="#carModal">选择</a>
+                  </dd>
+              </dl>
+              <dl class="u-dl " xg-co="0">
+                  <dt class="large c1" xg-co="0"></dt>
+
+                  <dd  class="">
+                    <input type="text" xg-co-input="2" class="u-input u-input-normal"><span class="u-btn btn btn-small" xg-type="2"  data-toggle="modal" data-target="#carModal">选择</a>
+                  </dd>
+              </dl>
+              <dl class="u-dl  f-hd" xg-co="1">
+                  <dt class="large c1" >日产协作专营店：</dt>
+
+                  <dd>
+                    <input type="text" xg-co-input="1" class="u-input u-input-normal"><span class="u-btn btn btn-small" xg-type="1"  data-toggle="modal" data-target="#carModal">选择</a>
+                  </dd>
+              </dl>
+              <dl class="u-dl  f-hd" xg-co="2">
+                  <dt class="large c1">启辰协作专营店：</dt>
+                  <dd class="">
+                    <input type="text" xg-co-input="2" class="u-input u-input-normal"><span class="u-btn btn btn-small" xg-type="2"  data-toggle="modal" data-target="#carModal">选择</a>
+                  </dd>
+              </dl>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="m-wrap">
+          <div class="m-t">
+            <span>展位信息</span>
+          </div>
+          <div class="m-c">
+            <div class="container-fluid">
+            <div class="row">
+            <div class="m-input-box f-cb">
+            <dl class="u-dl col-md-4">
+                <dt class="large ">展具级别：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+            </dl>
+            <dl class="u-dl col-md-4">
+                <dt class="large c1">展会时间：</dt>
+                <dd>
+                  <div class="m-time">
+                  <div class="input-group date form_date col-md-2" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="u-input u-input-time-l " type="text" value="" readonly>
+                    <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
+					<span class="input-group-addon">
+               <span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input2" value="" />
+               </div>
+                </dd>
+            </dl>
+            <dl class="u-dl col-md-4">
+                <dt class="large c1">展会名称：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+            </dl>
+            <dl class="u-dl col-md-4">
+                <dt class="large">展会名称：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+            </dl>
+            <dl class="u-dl col-md-4">
+                <dt class="large c1"><span class="s-red">*</span>场馆地址：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+            </dl>
+            <dl class="u-dl col-md-4">
+                <dt class="large c1"><span class="s-red">*</span>场馆WIFI：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+            </dl>
+            <dl class="u-dl col-md-4">
+                <dt class="large">主办单位：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+            </dl>
+            <dl class="u-dl col-md-4">
+                <dt class="large c1"><span class="s-red">*</span>主办方联系人：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+            </dl>
+            <dl class="u-dl col-md-4">
+                <dt class="large c1"><span class="s-red">*</span>主办方联系电话：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+            </dl>
+
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="m-wrap">
+          <div class="m-t">
+            <span>活动方案</span>
+          </div>
+          <div class="m-c">
+            <div class="container-fluid">
+            <div class="row">
+            <div class="m-act-apply">
+              <div class="m-t2"><span>车展活动、背景信息</span></div>
+              <div class="f-cb">
+              <dl class="u-dl col-md-6">
+                <dt class="large ">主办方：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+              </dl>
+              <dl class="u-dl col-md-6">
+                <dt class="large ">活动规模：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+              </dl>
+              <dl class="u-dl col-md-6">
+                <dt class="large ">场地介绍：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+              </dl>
+              <dl class="u-dl col-md-6">
+                <dt class="large ">参展厂商数量：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-large">
+                </dd>
+              </dl>
+              </div>
+              <div class="m-t2"><span>前期广告宣传</span></div>
+              <div class="f-cb">
+              <dl class="u-dl col-md-12">
+                <dt class="large ">投放内容：</dt>
+                <dd>
+                  <textarea name="" id="" class="u-textarea l" ></textarea>
+                </dd>
+              </dl>
+              </div>
+              <div class="m-t2"><span>现场集客手段</span></div>
+              <div class="f-cb">
+              <dl class="u-dl col-md-12">
+                <dt class="large ">互动形式：</dt>
+                <dd>
+                  <textarea name="" id="" class="u-textarea l" ></textarea>
+                </dd>
+              </dl>
+              <dl class="u-dl col-md-12">
+                <dt class="large ">演绎形式：</dt>
+                <dd>
+                  <textarea name="" id="" class="u-textarea l" ></textarea>
+                </dd>
+              </dl>
+              <dl class="u-dl col-md-12">
+                <dt class="large ">留资手段：</dt>
+                <dd>
+                  <textarea name="" id="" class="u-textarea l" ></textarea>
+                </dd>
+              </dl>
+              </div>
+              <div class="m-t2"><span>内外政策</span></div>
+              <div class="f-cb">
+              <dl class="u-dl col-md-12">
+                <dt class="large ">内部激励：</dt>
+                <dd>
+                  <textarea name="" id="" class="u-textarea l s" ></textarea>
+                </dd>
+              </dl>
+              <dl class="u-dl col-md-12">
+                <dt class="large ">促销政策：</dt>
+                <dd>
+                  <textarea name="" id="" class="u-textarea l s" ></textarea>
+                </dd>
+              </dl>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="m-wrap">
+          <div class="m-t">
+            <span>预算活动申请</span>
+          </div>
+          <div class="m-c">
+            <div class="container-fluid">
+            <div class="row">
+            <div class="m-table-f">
+            <table class="table table-bordered j-sq">
+              <thead>
+                <tr>
+                  <th>媒体类型</th>
+                  <th>媒体名称</th>
+                  <th>投放规格</th>
+                  <th>发布时间段</th>
+                  <th>发布频次</th>
+                  <th>预算费用(元)</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="text" class="u-input" placeholder="这里需要选择">
+                  </td>
+                  <td>
+                    <input type="text" class="u-input">
+                  </td>
+                  <td>
+                    <input type="text" class="u-input">
+                  </td>
+                  <td>
+                    <input type="text" class="u-input">
+                  </td>
+                  <td>
+                    <input type="text" class="u-input">
+                  </td>
+                  <td>
+                    <input type="text" class="u-input">
+                  </td>
+                  <td>
+                    <span class="add-a-row u-btn btn btn-grey">+</span>
+                    <span class="divide-a-row u-btn btn btn-grey">-</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="m-wrap">
+          <div class="m-t">
+            <span>线下活动费用</span>
+          </div>
+          <div class="m-c">
+            <div class="container-fluid">
+            <div class="row">
+             <div class="m-table-f">
+            <table class="table table-bordered j-xx">
+              <thead>
+                <tr>
+                  <th>活动地址</th>
+                  <th>活动时间段</th>
+                  <th colspan="4">明细</th>
+                  <th>合计费用</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+               <tr>
+                  <td>
+                    <input type="text" class="u-input" placeholder="这里需要选择">
+                  </td>
+                  <td>
+                    <input  type="text" value="" readonly class="form_datetime1 u-input u-input-time-s">-
+                    <input  type="text" value="" readonly class="form_datetime2 u-input u-input-time-s">
+                  </td>
+                  <td>
+                    费用类型
+                  </td>
+                  <td>
+                    费用描述
+                  </td>
+                  <td>
+                    费用时间段
+                  </td>
+                  <td>
+                    合计费用
+                  </td>
+                  <td>
+                    <input type="text" class="u-input  u-input-small">
+                  </td>
+                  <td>
+                    <span class="add-a-row u-btn btn btn-grey">+</span>
+                    <span class="divide-a-row u-btn btn btn-grey">-</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <input type="text" class="u-input u-input-small">
+                  </td>
+                  <td>
+                    <input type="text" class="u-input u-input-small">
+                  </td>
+                  <td>
+                    <input  type="text" value="" readonly class="form_datetime1 u-input u-input-time-s">-
+                    <input  type="text" value="" readonly class="form_datetime2 u-input u-input-time-s">
+                  </td>
+                  <td>
+                    <input type="text" class="u-input u-input-small">
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+           </div>
+            </div>
+          </div>
+        </div>
+        <div class="m-wrap">
+        <div class="m-c">
+          <div class="m-btn-box">
+            <div class="u-btn btn btn-main">提交</div>
+            <div class="u-btn btn btn-main">取消</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="g-foot"></div>
+  <!--弹出框-->
+
+
+  <!--弹出的模态框内容-->
+      <div class="modal fade bs-example-modal-lg" id="carModal" tabindex="-1" role="dialog"
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content m-lgmodal">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+               aria-hidden="true">×
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+               选择专营店
+            </h4>
+         </div>
+         <div class="modal-body  f-cb">
+               <div class="m-c2nd">
+           <div class="container-fluid">
+            <div class="row">
+               <dl class="col-md-4 u-dl">
+              <dt class="large">品牌：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
+              </dd>
+            </dl>
+            <dl class="col-md-4 u-dl">
+              <dt class="large">车系：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
+              </dd>
+            </dl>
+            <dl class="col-md-4 u-dl">
+              <dt class="large">车型：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
+              </dd>
+            </dl>
+            <dl class="col-md-4 u-dl">
+              <dt class="large">发动机排量：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
+              </dd>
+            </dl>
+            <dl class="col-md-4 u-dl">
+              <dt class="large">行驶里程：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
+              </dd>
+            </dl>
+               </div>
+               </div>
+
+            <div class="m-btn-box f-fr col-md-3">
+              <a href="javascript" class="u-btn btn btn-normal btn-main">搜索</a> <a href="javascript" class="u-btn btn btn-normal btn-white">取消</a>
+            </div>
+          </div>
+
+
+            <div class="m-table">
+            <table class="table table-bordered j-table">
+              <tr>
+                <th>选择</th>
+                <th class="w-10">专营店名称</th>
+                <th>专营店代码</th>
+                <th class="w-10">地址</th>
+                <th>负责人</th>
+                <th>其他信息</th>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class=" j-cb" xg-co-s="00"></td>
+                <td class="co-name">专营店1</td>
+                <td>1234</td>
+                <td>广州花都</td>
+                <td>小王</td>
+                <td>巴拉巴拉</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class=" j-cb" xg-co-s="01"></td>
+                <td class="co-name">专营店2</td>
+                <td>4321</td>
+                <td>广州天河</td>
+                <td>小许</td>
+                <td>巴拉巴拉</td>
+              </tr>
+             </table>
+            <div class="f-fr">
+              <nav>
+                <ul class="pagination">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default"
+               data-dismiss="modal">关闭
+            </button>
+            <button type="button" class="btn btn-primary j-mit" data-dismiss="modal">
+               提交
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+</div>
+
+  <!--modal-->
+  <!---->
+  <script>
+    //退出系统
+    $('.j-login').on('mouseover',function(){
+      $('.j-login-pop').show();
+    });
+    $('.j-login').on('mouseout',function(){
+      $('.j-login-pop').hide();
+    });
+
+    //侧边栏的交互
+    $('.j-s1').on('click',function(){
+      if($(this).hasClass('z-active')){
+        $(this).removeClass('z-active');
+        $(this).parent().find('.j-side-snd').hide()
+      }else{
+        $(this).addClass('z-active');
+        $(this).parent().find('.j-side-snd').show()
+      }
+    });
+    $('.j-s2').on('click',function(){
+      if($(this).hasClass('z-active')){
+      }else{
+        $('.j-s2').removeClass('z-active');
+        $(this).addClass('z-active');
+      }
+    });
+    //单选框切换
+    $('.j-radio-co').on('click',function(){
+      console.log($(this).attr('xg-co'));
+      var co=$(this).attr('xg-co');
+      $('.j-show').find('[xg-co]').hide();
+      $('.j-show').find('[xg-co='+$(this).attr('xg-co')+']').show()
+//      if(co=='0'){
+//        $('.j-show').find('dd[xg-co='+'1'+']').show();
+//        $('.j-show').find('dd[xg-co='+'2'+']').show().css("display","inline-block");;
+//      }
+
+    })
+    //弹出窗
+
+    //弹出窗返回值
+    //选中复选框
+    var arr=[];//返回的选项的信息数组
+    $('.j-cb').on('click',function(){
+      console.log(this.checked);
+    });
+    //提交更新input框的内容
+    $('.j-mit').on('click',function(){
+      arr=[];//每次提交前清空
+      $('.j-table').find($('[xg-co-s]')).each(function(i,el){
+        var t={};
+        //获得选中的选项到arr中
+        if(el.checked){
+          t.text=$(el).parent().parent().find('.co-name').text();
+          t.ID=$(el).attr('xg-co-s');
+          arr.push(t)
+        }else{
+          for(var i=0;i<arr.length;i++ ){
+            if(arr[i].ID==$(el).attr('xg-co-s')){
+              arr.splice(i,1);
+            }
+          }
+        }
+      });
+      console.log(arr);
+      var s='';
+      for(var i=0;i<arr.length;i++){
+        s+=(arr[i].text+'; ');
+      }//将新值赋值到对应的input框中
+      $('[xg-co-input]:visible').val(s);
+    });
+    //table 添加一行
+    function addRow($tbody,s){
+      $tbody.append(s);
+      forDateTime();
+    }
+    //table 减少一行
+    function divideRow($tbody){
+      if($tbody.find('tr').length>1){
+        $tbody.find('tr').last().remove();
+      }
+    }
+    var n=3;
+    $('.j-sq .add-a-row').on('click',function(){
+      var s='';
+      s+='<tr>'+
+                '<td>'+
+                  '<input type="text" class="u-input" placeholder="这里需要选择">'+
+                '</td>'+
+                '<td>'+
+                  '<input type="text" class="u-input">'+
+                '</td>'+
+                '<td>'+
+                  '<input type="text" class="u-input">'+
+                '</td>'+
+                '<td>'+
+                  '<input type="text" class="u-input">'+
+                '</td>'+
+                '<td>'+
+                  '<input type="text" class="u-input">'+
+                '</td>'+
+                '<td>'+
+                  '<input type="text" class="u-input">'+
+                '</td>'+
+                '<td></td>'+
+              '</tr>';
+      addRow($(this).parents('tbody'),s);
+    });
+    $('.j-xx .add-a-row').on('click',function(){
+      var s='';
+      s+='<tr>'+
+                '<td></td>'+
+                '<td></td>'+
+                '<td>'+
+                  '<input type="text" class="u-input u-input-small">'+
+                '</td>'+
+                '<td>'+
+                  '<input type="text" class="u-input u-input-small">'+
+                '</td>'+
+                '<td>'+
+                 '<input  type="text" value="" readonly class="form_datetime1 u-input u-input-time-s">'+'-'+
+                    '<input  type="text" value="" readonly class="form_datetime2 u-input u-input-time-s">'+
+                '</td>'+
+                '<td>'+
+                  '<input type="text" class="u-input u-input-small">'+
+                '</td>'+
+                '<td></td>'+
+                '<td></td>'+
+              '</tr>';
+      addRow($(this).parents('tbody'),s);
+    });
+    $('.divide-a-row').on('click',function(){
+      divideRow($(this).parents('tbody'));
+    });
+
+    //时间截取
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+    forDateTime();
+    function forDateTime(){
+     $(".form_datetime1").datetimepicker({
+       format: 'yyyy/mm/dd',
+       language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+     });
+     $(".form_datetime2").datetimepicker({
+       format: 'yyyy/mm/dd',
+       language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0});
+    }
+
+  </script>
+</body>
+</html>

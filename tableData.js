@@ -1,0 +1,33 @@
+var tableJson=[
+  {
+    "id":"",
+    "roleId":"6",
+    "monthId":"",
+    "dayId":"-60",
+    "weekId":"",
+    "position":"1",
+    "lableName":"与主办方洽谈",
+    "URL":""
+  },
+  {
+    "id":"",
+    "roleId":"7",
+    "monthId":"",
+    "dayId":"-60",
+    "weekId":"",
+    "position":"1",
+    "lableName":"与主办方洽谈",
+    "URL":"javacript:voic(0)"
+  },
+  {
+    "id":"",
+    "roleId":"4",
+    "monthId":"",
+    "dayId":"-45",
+    "weekId":"",
+    "position":"3",
+    "lableName":"发出站点启动工作邮件",
+    "URL":"javacript:voic(0)"
+  }
+
+]
