@@ -172,6 +172,9 @@
             <button type="button" class="btn btn-primary j-submit">
                提交
             </button>
+            <button type="button" class="btn btn-primary j-reset">
+               刷新
+            </button>
          </div>
       </div><!-- /.modal-content -->
    </div><!-- /.modal-dialog -->
@@ -190,6 +193,9 @@
       $('.j-submit').on('click',function(){
         $pop.hide();
         $cover.hide();
+      });
+      $('.j-reset').on('click',function(){
+        $ifram.attr('src', 'http://www.baidu.com');
       });
     </script>
     </body>

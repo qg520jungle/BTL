@@ -182,7 +182,14 @@
                   <td>mra@df.com</td>
                 </tr>
                 <tr>
-                  <td>13812341234</td>
+                  <td class="m-ball-a j-ball">13812341234
+                  <span class="s-link u-ball-more">更多</span>
+                  <div class="m-ball">
+                    <ul>
+                      <li>15012344321</li>
+                      <li>15012344321</li>
+                    </ul>
+                  </div></td>
                   <td>13812341234</td>
                   <td>13812341234</td>
                   <td>13812341234</td>
@@ -472,6 +479,12 @@
         $(this).addClass('z-active');
       }
     });
+    //气泡效果
+    $('.j-ball').on('mouseover',function(){
+      $('.m-ball').show();
+    }).on('mouseout',function(){
+      $('.m-ball').hide();
+    })
     var dataTable={
       nonth_jd:[],
       day_jd:[],

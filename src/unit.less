@@ -546,4 +546,71 @@
   border-radius: 11px;
 }
 
+.u-flag-right{
+  display: inline-block;
+  width: 88px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color:#fff;
+  background-color: #ccc;
+  position: relative;
+  &:before,&:after{
+    width: 0;
+    height: 0;
+    content: " ";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 20px 12px 20px 12px;
+    top:0;
+    right: -24px;
+    border-left-color: #ccc;
+  }
+  &:before{
+    border-left-color: #FFF;
+    left: 0;
+  }
+  &:after{
 
+  }
+  &.first{
+    &:before{
+      border-left-color: transparent;
+    }
+  }
+  &.done{
+    background-color: #bfbfbf;
+    &:after{
+      border-left-color: #bfbfbf;
+    }
+  }
+  &.ing{
+    background-color: #21a0eb;
+    &:after{
+      border-left-color: #21a0eb;
+    }
+  }
+  &.undo{
+    background-color: #c90028;
+    &:after{
+      border-left-color: #c90028;
+    }
+  }
+  .p{
+    position: absolute;
+    top: -5px;
+    left: 13px;
+  }
+  .d{
+    position: absolute;
+    bottom: -4px;
+    right: 12px;
+  }
+  .star{
+    position: absolute;
+    right: 0px;
+    top: 11px;
+  }
+}
