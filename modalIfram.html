@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" id="viewport" content="width=400">
+  <meta name="keywords" content="模态框模板" />
+  <meta name="description" content="模态框模板" />
+  <title>首页</title>
+  <link href="res/bootstrap.css" rel="stylesheet">
+  <link href="res/btl-global.css" rel="stylesheet">
+  <script src="lib/jquery.js"></script>
+  <!--[if lte IE 9]>
+  <script src="lib/respond.min.js"></script>
+  <script src="lib/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="res/bootstrap.min.js"></script>
+  <!--<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />-->
+  <!--<link href="favicon.ico" rel="bookmark icon" />-->
+  <style>
+    ul>li>input{
+      display: none;
+    }
+    ul>li>input.act{
+      display: block;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="m-top">
+   <a class="u-btn btn btn-normal btn-main j-pop" href="#" >选择</a>
+  </div>
+
+  <div class="m-cover j-cover"></div>
+  <div class="m-popup large j-popup">
+    <iframe class="m-pop-iframe j-iframe" src="./modalIframTable.html"></iframe>
+  </div>
+  <script>
+    $('.j-pop').on('click', function() {
+        $('.m-cover, .m-popup').show();
+    });
+    $('.j-cover').on('click', function() {
+        $('.j-cover, .j-popup').hide();
+    });
+  </script>
+</body>
+</html>

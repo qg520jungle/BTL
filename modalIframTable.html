@@ -29,35 +29,13 @@
   </style>
 </head>
 <body>
-  <div class="m-top">
-   <a class="u-btn btn btn-normal btn-main" href="#"
-        data-toggle="modal" data-target="#carModal">选择</a>
-      </div>
-      <ul>
-        <li><input type="text" class="xg-1 act"></li>
-        <li><input type="text" class="xg-2"></li>
-        <li><input type="text" class="xg-3"></li>
-      </ul>
-      <script>
-        $('.xg-1').on('change',function(){
-          $('.xg-2').addClass('act');
-        });
-        $('.xg-2').on('change',function(){
-          $('.xg-3').addClass('act');
-        });
-        function judgeShow(p,c,ct){
-          p.val()?c.show():c.val('')&&ct.val('');
-          c.val()?ct.show():ct.val('');
-        }
 
-      </script>
   <!--弹出的模态框内容-->
-      <div class="modal fade bs-example-modal-lg" id="carModal" tabindex="-1" role="dialog"
-   aria-labelledby="myModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-      <div class="modal-content m-lgmodal">
+
+   <div class="">
+      <div class="m-lgifram">
          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"
+            <button type="button" class="close j-close" data-dismiss="modal"
                aria-hidden="true">×
             </button>
             <h4 class="modal-title" id="myModalLabel">
@@ -188,61 +166,31 @@
             </div>
          </div>
          <div class="modal-footer">
-            <button type="button" class="btn btn-default"
+            <button type="button" class="btn btn-default j-close"
                data-dismiss="modal">关闭
             </button>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary j-submit">
                提交
             </button>
          </div>
       </div><!-- /.modal-content -->
    </div><!-- /.modal-dialog -->
-</div>
 
   <!--modal-->
 
     <script>
-      var arr=[1,2,3,4,5,6,7,8,9];
-      //输出结果函数
-      outValue([1],[],[1,2,3],3);
-      function outValue(a1,a2,a3,n){
-        var s1='解';
-        var s2='数组1内容:';
-        var s3='数组2内容:';
-        var s4='数组3内容:';
-        var sa='';
-        sa+=s1;
-        sa+=n;
-        sa+=s2;
-        sa+='{'
-        for(var i=0;i<a1.length;i++){
-          sa+=a1[i];
-          if(i<length-1){
-            sa+=','
-          }else{
-            sa+='}'
-          }
-        }
-        sa+=';'+s3+'{'
-        for(var i=0;i<a2.length;i++){
-          sa+=a2[i];
-          if(i<length-1){
-            sa+=','
-          }else{
-            sa+='}'
-          }
-        }
-        sa+=';'+s4+'{'
-        for(var i=0;i<a3.length;i++){
-          sa+=a3[i];
-          if(i<length-1){
-            sa+=','
-          }else{
-            sa+='}'
-          }
-        }
-        sa+=';'
-      }
+      var $ifram=$('.j-iframe', window.parent.document);
+      var $pop=$ifram.parent();
+      var $cover=$ifram.parent().parent().find('.j-cover');
+      console.log($ifram)
+      $('.j-close').on('click',function(){
+        $pop.hide();
+        $cover.hide();
+      });
+      $('.j-submit').on('click',function(){
+        $pop.hide();
+        $cover.hide();
+      });
     </script>
     </body>
 </html>
