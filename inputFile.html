@@ -8,7 +8,7 @@
   <meta name="viewport" id="viewport" content="width=400">
   <meta name="keywords" content="模态框模板" />
   <meta name="description" content="模态框模板" />
-  <title>首页</title>
+  <title>input  file</title>
   <link href="res/bootstrap.css" rel="stylesheet">
   <link href="res/btl-global.css" rel="stylesheet">
   <script src="lib/jquery.js"></script>
@@ -20,35 +20,21 @@
   <!--<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />-->
   <!--<link href="favicon.ico" rel="bookmark icon" />-->
   <style>
-    ul>li>input{
+    input[type="file"] {
       display: none;
-    }
-    ul>li>input.act{
-      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="m-top">
-   <a class="u-btn btn btn-normal btn-main j-pop" href="#" >选择</a>
+  <div>
+    <input type="file" class="f-hd j-file">
+    <input type="text" class="u-input u-input-l ">
+    <span class="btn u-btn btn-main j-text">选择</span>
   </div>
-  <input type="text" class="u-input u-input-normal j-input" value="i1,i2">
-  <input type="text" class="f-hd j-data1" value="i1,i2">
-  <input type="text" class="f-hd j-data2">
-
-  <div class="m-cover j-cover"></div>
-  <div class="m-popup large j-popup">
-    <iframe class="m-pop-iframe j-iframe" id="iframeSon" src="./modalIframTable.html"></iframe>
-  </div>
-  <script>
-    var $ifram=$(window.frames['iframeSon'].contentWindow);
-    $('.j-pop').on('click', function() {
-      $('.j-iframe').attr('src',$('.j-iframe').attr('src'));
-      $('.m-cover, .m-popup').show();
-    });
-    $('.j-cover').on('click', function() {
-        $('.j-cover, .j-popup').hide();
-    });
-  </script>
+<script>
+  $('.j-text').on('click',function(){
+    $('.j-file').click();
+  })
+</script>
 </body>
 </html>

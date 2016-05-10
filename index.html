@@ -95,9 +95,70 @@
 
     <div class="m-main">
     <div class="m-display">
-      <div class="m-main-box">
-        <div>
-          活动日历
+      <div class="m-main-box f-cb">
+        <div class="f-fl">
+        <div class="m-calendar">
+          <ul class="u-tt f-cb">
+            <li class=""><a class="u-tab act j-March ">3月</a></li>
+            <li><a class="u-tab">4月</a></li>
+            <li><a class="u-tab">5月</a></li>
+            <li><a class="u-tab">6月</a></li>
+            <li><a class="u-tab">7月</a></li>
+            <li><a class="u-tab">8月</a></li>
+            <li><a class="u-tab">9月</a></li>
+            <li><a class="u-tab">10月</a></li>
+            <li><a class="u-tab">11月</a></li>
+            <li><a class="u-tab">12月</a></li>
+          </ul>
+          <div class="u-cc">
+            <div class="j-March j-box">
+              <div class="toleft">
+                <i class="u-icon u-icon-toleft j-toleft"></i>
+              </div>
+              <div class="toright">
+                <i class="u-icon u-icon-toright j-toright"></i>
+              </div>
+              <div class="u-show j-show">
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </div>
+        <div class="f-fl">
+          <div class="m-main-card all">
+            <div class="tt">
+              2016车展站点总览
+            </div>
+            <div class="cc">
+              <ul class="f-cb">
+                <li class="li-3">
+                  <i class="u-icon u-icon-b count">10</i>
+                  <span class="title">站点总数</span>
+                </li>
+                <li class="li-3">
+                  <i class="u-icon u-icon-o count">10</i>
+                  <span class="title">已执行站点</span>
+                </li>
+                <li class="li-3">
+                  <i class="u-icon u-icon-g count">10</i>
+                  <span class="title">未执行站点</span>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <div class="f-fl">
+          <div class="m-main-card wait">
+
+          </div>
+        </div>
+        <div class="f-fl">
+          <div class="m-main-card map">
+
+          </div>
         </div>
       </div>
     </div>
@@ -113,7 +174,380 @@
     $('.j-login').on('mouseout',function(){
       $('.j-login-pop').hide();
     });
+    //添加标签数据
+    var cal=[
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'广州',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      },
+      {
+        area:'南区',
+        lvl:'C级',
+        city:'上海',
+        dateStart:'4-5',
+        dateEnd:'4-8'
+      }
+    ]
+    function initCalendar(){
+      var s=''
+      for(var i=0;i<cal.length;i++){
+        if(i!=0&&i%6==0){
+          s+='</ul>'
+        }
+        if(i%6==0){
+          s+='<ul class="u-card-list f-cb j-card-list">'
+        }
+        s+='<li class="u-card '
+        if(i%3==0)s+='first ';
+        s+=' s-color-'+(i%6+1)+'">';
+        s+='<div class="f-cb">'+
+                    '<span class="left">'+cal[i].area+'</span>'+
+                    '<span class="right">'+cal[i].lvl+'</span>'+
+                  '</div>'+
+                  '<div>'+
+                    '<span>'+cal[i].city+'</span>'+
+                  '</div>'+
+                  '<div>'+
+                    '<span>'+cal[i].dateStart+~+cal[i].dateEnd+'</span>'+
+                  '</div>'+
+                '</li>'
 
+      }
+      s+='</ul>';
+      $('.j-show').append(s);
+      (function(){
+       var com=622;
+      var $pages=$('.j-card-list');
+      $pages.each(function(index,el){
+        $(el).css({
+          left: index*com+'px'
+        })
+      });
+    })();
+    }
+    //初始化位置
+    initCalendar();
+
+//点击换下一个页面
+
+    $('.j-toleft').on('click',function(){
+      var $pages=$(this).parents('.j-box').find('.j-card-list');
+      var com=622;
+      $pages.stop(true,true);
+      $pages.each(function(index,el){
+        var l=$(el).css('left');
+        l=l.replace("px","");
+        var numl=parseInt(l);
+          if($(el).css('left')==(index*com+'px')){
+            $(el).animate({
+              left: index*com+40+'px'
+            },100).animate({
+              left: index*com+'px'
+            });
+          }else{
+            $(el).animate({
+              left: (numl+com)+'px'
+            });
+          }
+      });
+    })
+    $('.j-toright').on('click',function(){
+       var $pages=$(this).parents('.j-box').find('.j-card-list');
+      var com=622;
+      $pages.stop(true,true);
+      $pages.each(function(index,el){
+        var l=$(el).css('left');
+        l=l.replace("px","");
+        var numl=parseInt(l);
+          if($(el).css('left')==((index-$pages.length+1)*com+'px')){
+            $(el).animate({
+              left: (index-$pages.length+1)*com-40+'px'
+            },100).animate({
+              left: (index-$pages.length+1)*com+'px'
+            });
+          }else{
+            $(el).animate({
+              left: (numl-com)+'px'
+            });
+          }
+    })
+    })
 
 
   </script>

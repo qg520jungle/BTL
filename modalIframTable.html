@@ -33,7 +33,7 @@
   <!--弹出的模态框内容-->
 
    <div class="">
-      <div class="m-lgifram">
+      <div class=" m-lgifram">
          <div class="modal-header">
             <button type="button" class="close j-close" data-dismiss="modal"
                aria-hidden="true">×
@@ -91,7 +91,7 @@
             </div>
           </div>
 
-            <div class="m-table">
+            <div class="m-table f-cb">
             <table class="table table-bordered">
               <tr>
                 <th>选择</th>
@@ -106,7 +106,7 @@
                 <th>销售定价</th>
               </tr>
               <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" i-data="i1" class="j-cb"></td>
                 <td>日产</td>
                 <td>轩逸</td>
                 <td>2.0 XV CVT Prem 豪华版</td>
@@ -118,7 +118,7 @@
                 <td>250000元</td>
               </tr>
               <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" i-data="i2" class="j-cb"></td>
                 <td>日产</td>
                 <td>轩逸</td>
                 <td>2.0 XV CVT Prem 豪华版</td>
@@ -130,7 +130,7 @@
                 <td>250000元</td>
               </tr>
               <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" i-data="i3" class="j-cb"></td>
                 <td>日产</td>
                 <td>轩逸</td>
                 <td>2.0 XV CVT Prem 豪华版</td>
@@ -164,8 +164,19 @@
               </nav>
             </div>
             </div>
+            <div class="m-check-list">
+              <ul class="j-list f-cb">
+                <li>
+                  <span>ID:...</span><span class="u-x">×
+            </span>
+                </li>
+              </ul>
+            </div>
          </div>
          <div class="modal-footer">
+           <button type="button" class="btn btn-default test"
+               data-dismiss="modal">测试
+            </button>
             <button type="button" class="btn btn-default j-close"
                data-dismiss="modal">关闭
             </button>
@@ -182,15 +193,97 @@
   <!--modal-->
 
     <script>
+      var arr=[];
       var $ifram=$('.j-iframe', window.parent.document);
       var $pop=$ifram.parent();
       var $cover=$ifram.parent().parent().find('.j-cover');
-      console.log($ifram)
+      var $input=$ifram.parents('body').find('.j-input');
+      var $data1=$ifram.parents('body').find('.j-data1');
+      var $data2=$ifram.parents('body').find('.j-data2');
+     /* console.log($ifram)*/
+      function toArr(str){
+        var arr=[]
+        arr=str.split(",")
+        return arr
+      }
+      function toStr(arr){
+        var str='';
+        str=arr.join(',');
+        return str
+      }
+      arr=toArr($data1.val());
+      //加载数组内容到table
+      function loadList(arr){
+        $('[i-data]').each(function(index,el){
+          el.checked=false;
+        })
+        for(var i=0;i<arr.length;i++){
+            if($('[i-data='+arr[i]+']')){
+              $('[i-data='+arr[i]+']').get(0).checked=true;
+            }
+        }
+      }
+      loadList(arr);
+      //数组添加
+      function addArr(_id){
+        arr.push(_id);
+      }
+      //数组删除
+      function divArr(_id){
+        for(var i=0;i<arr.length;i++){
+          if(arr[i]==_id){
+            arr.splice(i,1);
+          }
+        }
+      }
+      //显示区加载
+      function blockShow(arr){
+        s='';
+        for(var i=0;i<arr.length;i++){
+          s+='<li b-data="'+arr[i]+'">'
+          s+='<span>ID:'+arr[i]+'</span><span class="u-x j-x" >×</span>'
+          s+='</li>'
+        }
+        $('.j-list').html('');
+        $('.j-list').append(s);
+        delClick();
+      }
+      blockShow(arr);
+      //添加点击事件
+      function delClick(){
+        $('.j-x').on('click',function(){
+          var _id=$(this).parent().attr('b-data');
+          divArr(_id);
+          console.log(arr);
+          loadList(arr);
+          blockShow(arr);
+        });
+      }
+      //添加选择事件
+      $('.j-cb').on('click',function(){
+        if($(this).get(0).checked===true){
+          var _id=$(this).attr('i-data');
+          addArr(_id);
+          blockShow(arr);
+        }else{
+          var _id2=$(this).attr('i-data');
+          divArr(_id2);
+          blockShow(arr);
+        }
+      })
+      //取消恢复未修改状态
       $('.j-close').on('click',function(){
+        $input.val($data1.val());
         $pop.hide();
         $cover.hide();
       });
+
+      //提交赋值到父页面
       $('.j-submit').on('click',function(){
+        var str='';
+        str=toStr(arr)
+        $input.val(str)
+        $data1.val(str)
         $pop.hide();
         $cover.hide();
       });

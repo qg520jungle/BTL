@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" id="viewport" content="width=400">
+  <meta name="keywords" content="商城登陆" />
+  <meta name="description" content="商城登陆" />
+  <title>商城登陆</title>
+
+
+  <link href="res/bootstrap.css" rel="stylesheet">
+  <link href="res/btl-global.css" rel="stylesheet">
+
+  <script src="lib/jquery.js"></script>
+  <!--[if lte IE 9]>
+  <script src="lib/respond.min.js"></script>
+  <script src="lib/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="res/bootstrap.min.js"></script>
+  <!--<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />-->
+  <!--<link href="favicon.ico" rel="bookmark icon" />-->
+
+
+</head>
+<body class="f-wh100">
+  <div class="g-body u-logon f-pr f-wh100">
+    <div class="u-logon-bg"></div>
+    <div class="m-logo">
+      <img src="images/logo.png" alt="">
+    </div>
+    <div class="m-logon-bg mini"></div>
+    <div class="m-logon mini">
+      <div class="title">
+        <img src="./images/title.png" alt="">
+      </div>
+      <div class="form">
+        <div class="u-logon-input">
+          <span class="tt"><i class="u-icon u-icon-host"></i> 用户名</span>
+          <input type="text" class="cc">
+
+        </div>
+
+        <div class="u-logon-input">
+          <span class="tt"><i class="u-icon u-icon-psw"></i> 密&nbsp;&nbsp;&nbsp;码</span>
+          <input type="password" class="cc">
+
+        </div>
+        <div class="u-tips">
+            <span class="s-red"></span>
+        </div>
+        <div class="u-logon-operation f-cb">
+          <div class="f-fl">
+            <i class="u-icon u-icon-go z-active j-go"></i><span class="tt">记住我</span>
+          </div>
+          <a href="###" class="f-fr cc">找回密码</a>
+        </div>
+        <div class="u-logon-btnbox">
+          <span class="u-btn u-btn-logon">登录</span>
+        </div>
+      </div>
+    </div>
+    <div class="m-foot">
+      <span class="s-white">&copy; 2015东风日产版权所有 粤ICP备10218963号 3</span>
+    </div>
+  </div>
+  <script>
+    $('.j-go').on('click',function(){
+      if($(this).hasClass('z-active')){
+        $(this).removeClass('z-active')
+      }else{
+        $(this).addClass('z-active')
+      }
+    })
+  </script>
+</body>
+</html>

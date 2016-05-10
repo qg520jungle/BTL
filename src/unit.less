@@ -189,6 +189,13 @@
     top: 4px;
     right: -21px;
   }
+  .u-img.u-dl-a{
+    display: block;
+    width: 200px;
+    height: 116px;
+    margin-top: 20px;
+    margin-left: 104px;
+  }
 }
 .u-lvl{
   width: 80%;
@@ -298,6 +305,12 @@
     width: 100%;
   }
 }
+.m-logo{
+  position: absolute;
+  top: 0;
+  left:50%;
+  margin-left: -500px;
+}
 .u-logon{
   overflow:auto;
 }
@@ -306,38 +319,30 @@
   width: 100%;
   margin: 0 auto;
   height: 100%;
-  background: url(../upload/logonBg.jpg) center center no-repeat;     background-size: cover;
-  &.mini{
-    background: url(../upload/loginBg.jpg) center center no-repeat;
-  }
+  background: url(../images/loginBg.jpg) center center no-repeat;     background-size: cover;
 }
 .m-logon-bg{
   position: absolute;
-  top:95px;
+  top:260px;
   left: 50%;
-  margin-left: -300px;
-  width: 332px;
+  margin-left: 80px;
+  width: 360px;
   height: 338px;
   background-color: #fff;
   &.mini{
     height: 250px;
-    margin-left: 170px;
   }
 }
 .m-logon-bg-shadow{
   position: absolute;
-  top:115px;
+  top:280px;
   left: 50%;
-  margin-left: -300px;
-  width: 332px;
+  margin-left: 80px;
+  width: 360px;
   height: 338px;
   background-color: #000;
   opacity: .5;
   filter: alpha(opacity=50);
-  &.mini{
-    height: 250px;
-    margin-left: 190px;
-  }
 }
 .m-login-title{
   position: relative;
@@ -358,30 +363,42 @@
     color:#c4c9cd;
   }
 }
+.m-foot{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  .s-white{
+    font-size: 16px;
+  }
+}
 .u-logo-title{
   display: inline-block;
   width: 89px;
   height: 86px;
   margin-top: 10px;
   margin-left: 10px;
-  background: url(../upload/logo.png);
+  background: url(../images/logo.png);
 }
 
 .m-logon{
   position: absolute;
-  top:95px;
+  top:260px;
   left: 50%;
-  margin-left: -300px;
-  width: 332px;
+  margin-left: 80px;
+  width: 360px;
   height: 338px;
    &.mini{
     height: 250px;
-    margin-left: 170px;
   }
 
+  .title{
+    position: absolute;
+    top: -86px;
+  }
 
   .form{
-    width: 292px;
+    width: 316px;
     margin: 0 auto;
   }
   .u-logon-input{
@@ -394,6 +411,7 @@
     .tt{
       font-size: 16px;
       height: 36px;
+      width: 75px;
       line-height: 34px;
       display: inline-block;
       margin-left: 11px;
@@ -401,7 +419,7 @@
     .cc{
       border: 0;
       outline: 0;
-      width: 200px;
+      width: 210px;
     }
     &.short{
       width: 190px;
@@ -420,6 +438,11 @@
       background-color: #fff;
     }
   }
+  .u-tips{
+    margin-top: -8px;
+    margin-bottom: 5px;
+    height: 26px;
+  }
   .u-logon-operation{
     .u-icon-go{
    padding-top: 2px;
@@ -428,7 +451,7 @@
       font-size: 14px;
       color:#acacac;
       margin-left: 14px;
-          vertical-align: super;
+      vertical-align: middle;
     }
     .cc,.cc:hover{
       font-size: 14px;
@@ -439,14 +462,14 @@
 
   .u-logon-btnbox{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 24px;
     .u-btn-logon{
       cursor: pointer;
       display: block;
       width: 100%;
-      background-color: #ff7a47;
-      height: 45px;
-      line-height: 45px;
+      background-color: #c90028;
+      height: 40px;
+      line-height: 40px;
       text-align: center;
       color: #fff;
       font-size: 18px;
@@ -481,27 +504,13 @@
   }
 }
 .m-login-left{
-  position: absolute;
-  left: 0;
-  top:12px;
-  width: 670px;
-  height:  370px;
-  background: url(../upload/loginleft.png) center center no-repeat;
+
 }
 .m-middle-login{
   width: 1200px;
   margin: 0 auto;
 }
-.u-icon-go{
-  display: inline-block;
-  cursor: pointer;
-  width:20px;
-  height: 20px;
-  background: url(../upload/go.png) center center no-repeat;
-  &.z-active{
-    background: url(../upload/go_active.png) center center no-repeat;
-  }
-}
+
 .u-arrow-right{
   position: absolute;
   display: block;
@@ -613,4 +622,14 @@
     right: 0px;
     top: 11px;
   }
+}
+.u-x{
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+  cursor: pointer;
 }

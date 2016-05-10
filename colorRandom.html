@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" id="viewport" content="width=400">
+  <meta name="keywords" content="模态框模板" />
+  <meta name="description" content="模态框模板" />
+  <title>首页</title>
+  <link href="res/bootstrap.css" rel="stylesheet">
+  <link href="res/btl-global.css" rel="stylesheet">
+  <script src="lib/jquery.js"></script>
+  <!--[if lte IE 9]>
+  <script src="lib/respond.min.js"></script>
+  <script src="lib/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="res/bootstrap.min.js"></script>
+  <!--<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />-->
+  <!--<link href="favicon.ico" rel="bookmark icon" />-->
+  <style>
+    ul>li>input{
+      display: none;
+    }
+    ul>li>input.act{
+      display: block;
+    }
+    .f-init{
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+    .color-box{
+      margin-top: 20px;
+      margin-left: 40px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd
+    }
+  </style>
+</head>
+<body>
+  <div class="m-top">
+   <a class="u-btn btn btn-normal btn-main j-color f-init" href="#"
+        data-toggle="modal" data-target="#carModal">改变颜色</a>
+  </div>
+  <div class="color-box">
+
+  </div>
+
+
+<script>
+//  doInTime(100000)
+  //定时器
+  function doInTime(t){
+    var timer
+//    timer=setTimeout(function(){
+//      colorRandom()
+//    },100);
+    setInterval(function(){
+      colorRandom()
+    },t)
+  }
+  $('.j-color').on('click',function(){
+    colorRandom()
+  })
+  //生成随机的颜色
+  function colorRandom(){
+    var red=0,green=0,blue=0;
+    var color='';
+    red=toXo(beRandom(0,255));
+    green=toXo(beRandom(0,255));
+    blue=toXo(beRandom(0,255));
+    color+=red;
+    color+=green;
+    color+=blue;
+    $('.color-box').css({
+      backgroundColor:'#'+color
+    })
+    console.log('#'+color)
+  }
+  //生成n-m位随机数
+  function beRandom(n,m){
+    var ran=0;
+    ran=parseInt(Math.random()*(m-n+1)+n);
+    return ran
+  }
+  //转换为16位的字符串，用0占位
+  function toXo(num){
+    var x=''
+    x=num.toString(16);
+    x.length==1?x='0'+x:''
+    return x
+  }
+</script>
+</body>
+</html>

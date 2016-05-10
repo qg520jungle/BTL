@@ -124,10 +124,11 @@
         <li><a href="###" class="f-pr  j-s1"><i class=" iconfont chading"></i><span class="tab">站点日志</span><div class="u-arrow-right"></div></a></li>
       </ul>
     </div>
+
+      <div class="m-display">
       <div class="m-crumb">
         <i class="u-icon u-icon-location "></i><span>您所在的位置：</span><a href="###">双月申请</a><span class="s-ff-c"> > </span><a href="###" class="z-active">双月审核</a><span class="s-ff-c"> > </span><a href="###" class="z-active">查看详情</a>
       </div>
-      <div class="m-display">
        <div class="m-wrap">
           <div class="m-t">
             <span>线下活动费用</span>
@@ -202,7 +203,7 @@
             </table>
             </div>
 
-      <div class="m-table-f">
+      <div class="m-table-f j-table-f">
             <table class="table table-bordered m-table-mid">
               <thead>
                 <tr>
@@ -218,7 +219,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>15/8/1(N-60)</td>
+                  <td rowspan="1">15/8/1(N-60)</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -368,7 +369,7 @@
                   <td>上传活动运营手册（含发布会流程、脚本，现场促销活动，分工表，排班表等）</td>
                 </tr>
                 <tr>
-                  <td>15/9/30-10/5(N)</td>
+                  <td rowspan="1">15/9/30-10/5(N)</td>
                   <td colspan="2">现场检查</td>
                   <td>现场管理</td>
                   <td></td>
@@ -377,7 +378,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td>15/10/6(N+1)</td>
+                  <td rowspan="1">15/10/6(N+1)</td>
                   <td>提醒留资量</td>
                   <td></td>
                   <td></td>
@@ -434,7 +435,7 @@
                   <td>上传活动总结</td>
                 </tr>
                 <tr>
-                  <td>15/12/4(N+60)</td>
+                  <td rowspan="1">15/12/4(N+60)</td>
                   <td colspan="7">车展收尾（KPI的检核）</td>
                 </tr>
               </tbody>
@@ -653,7 +654,7 @@
       t_60Arr=_table.t_60Arr;
       t_60Arr=initTable(t_60Arr);
       var tr1='<tbody>'+'<tr>';
-      tr1+='<td>'+timeArr[_t++]+'</td>';
+      tr1+='<td rowspan="1">'+timeArr[_t++]+'</td>';
       for(var tr=0;tr<1;tr++){
         if(tr!=0){
           tr1+='<tr>';
@@ -885,7 +886,7 @@
         ]
       ]
       var tr7='<tr>';
-      tr7+='<td >'+timeArr[_t++]+'</td>';
+      tr7+='<td rowspan="1">'+timeArr[_t++]+'</td>';
       for(var tr=0;tr<1;tr++){
         if(tr!=0){
           tr7+='<tr>';
@@ -982,7 +983,7 @@
         ]
       ]
       var tr11='<tr>';
-      tr11+='<td >'+timeArr[_t++]+'</td>';
+      tr11+='<td rowspan="1">'+timeArr[_t++]+'</td>';
       for(var tr=0;tr<1;tr++){
         if(tr!=0){
           tr11+='<tr>';
@@ -1022,8 +1023,70 @@
       return is_tr
     }
 
+/*$onclick(1){
+  hideCol(1)
+}*/
+//隐藏第n列
+function hideCol(n){
+  var $table=$('.j-table-f table');
+  var $thead=$table.find('thead tr');
+  var $tbody=$table.find('tbody tr');
+  var aimHead=$thead.find(':nth-child('+n+')');
+  var aimBody=$tbody.find(':nth-child(2)');
+  console.log(aimHead.html());
+  $tbody.each(function(index,el){
+    console.log($(el).html());
+    //分情况讨论
+    //确定为第几个元素
+    var no=0;
+    no=$(el).find('td').length
+    console.log(no)
+    no=0;
+    if(n==1){
+      $(el).find('td[rowspan]').hide()
+    }else{
+      if($(el).find('td').attr('rowspan')==undefined){
+        console.log(false);
+        var i=0;
+      }else{
+        console.log(true)
+        var i=1;
+      }
+      for(;i<$(el).find('td').length;i++){
+        if($(el).find('td:nth-child('+i+')').attr('colspan')==undefined||$(el).find('td:nth-child('+i+')').attr('colspan')==1){
+          no++
+          if(no>=n){
+            $(el).find('td:nth-child('+i+')').hide();
+            break;
+          }
+        }else{
+          no+=parseInt($(el).find('td:nth-child('+i+')').attr('colspan'));
+          if(no>=n){
+            var c=$(el).find('td:nth-child('+i+')').attr('colspan');
+            $(el).find('td:nth-child('+i+')').attr('colspan',c-1);
+            break;
+          }
+        }
+      }
+      console.log(no)
+    }
+      //1.之前无且本身无colspan 或者 colspan=="1"，直接隐藏
 
-
+      //2.之前有colspan，需要重新定位，自己的位置
+        //若不在colspan范围内
+          //若本身无colspan 或者 colspan=="1"，直接隐藏
+          //本身为colspan>1 则colspan--
+        //若自己在colspan范围内，则其colspan--
+  });
+  console.log($tbody.html());
+  //头部的隐藏
+  aimHead.hide();
+  /*aimBody.each(function(el){
+    $(el).hide();
+  })*/
+}
+hideCol(5)
+hideCol(2)
   </script>
 </body>
 </html>

@@ -6,9 +6,9 @@
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="viewport" id="viewport" content="width=400">
-  <meta name="keywords" content="双月审核" />
-  <meta name="description" content="双月审核" />
-  <title>双月审核</title>
+  <meta name="keywords" content="国际车展总览" />
+  <meta name="description" content="国际车展总览" />
+  <title>国际车展总览</title>
   <!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="res/font-awesome/4.2.0/css/font-awesome.min.css" />
 
@@ -138,6 +138,7 @@
               </div>
               <div class="content f-cb">
                 <ul class="m-flag-box f-cb left">
+<!--
                   <li class="m-flag ">
                     <div class="u-flag-right first done">
                       <i class="p u-icon u-icon-p"></i>
@@ -186,6 +187,7 @@
                       <span class="m">4月</span>
                     </div>
                   </li>
+-->
                 </ul>
                 <div class="right">
                   <ul>
@@ -222,7 +224,122 @@
           <div class="m-c">
             <div class="container-fluid">
             <div class="row">
+              <div>
 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#N6" aria-controls="home" role="tab" data-toggle="tab">N-6（月）</a></li>
+                  <li role="presentation"><a href="#N5" aria-controls="profile" role="tab" data-toggle="tab">N-5（月）</a></li>
+                  <li role="presentation"><a href="#N4" aria-controls="messages" role="tab" data-toggle="tab">N-4（月）</a></li>
+                  <li role="presentation"><a href="#N3" aria-controls="settings" role="tab" data-toggle="tab">N-3（月）</a></li>
+                  <li role="presentation"><a href="#N2" aria-controls="settings" role="tab" data-toggle="tab">N-2（月）</a></li>
+                  <li role="presentation"><a href="#N1" aria-controls="settings" role="tab" data-toggle="tab">N-1（月）</a></li>
+                  <li role="presentation"><a href="#N" aria-controls="settings" role="tab" data-toggle="tab">N（月）</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="N6">
+                     <div class="m-table-f">
+            <table class="table table-bordered j-sq">
+              <thead>
+                <tr>
+                  <th>人民/时间（周）</th>
+                  <th>W1</th>
+                  <th>W2</th>
+                  <th>W3</th>
+                  <th>W4</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>DFI/THC车展组</th>
+                  <td>
+                    车展基础信息确认（展会信息，展示物信息，参展面积，参展主题，展具设计方向，演艺方向）
+                  </td>
+                  <td>
+                    第一次节点会议
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+                    完成签办
+                  </td>
+                </tr>
+                <tr>
+                  <th>招投标</th>
+                  <td>
+                    采购部沟通
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>展具设计监理</th>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>展具制作搭建</th>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>AV监理</th>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="N5">5</div>
+                  <div role="tabpanel" class="tab-pane" id="N4">4</div>
+                  <div role="tabpanel" class="tab-pane" id="N3">3</div>
+                  <div role="tabpanel" class="tab-pane" id="N2">2</div>
+                  <div role="tabpanel" class="tab-pane" id="N1">1</div>
+                  <div role="tabpanel" class="tab-pane" id="N">0</div>
+                </div>
+
+              </div>
             </div>
             </div>
           </div>
@@ -258,6 +375,90 @@
         $(this).addClass('z-active');
       }
     });
+
+    //车展进度 载入数据
+    var nInfo=[
+      {
+        text:9,
+        step:'done',
+        p:true,
+        d:true
+      },
+      {
+        text:10,
+        step:'done',
+        p:false,
+        d:true
+      },
+      {
+        text:11,
+        step:'done',
+        p:true,
+        d:true
+      },
+      {
+        text:12,
+        step:'done',
+        p:true,
+        d:true
+      },
+      {
+        text:1,
+        step:'ing',
+        p:false,
+        d:false
+      },
+      {
+        text:2,
+        step:'undo',
+        p:true,
+        d:false
+      },
+      {
+        text:3,
+        step:'undo',
+        p:true,
+        d:false
+      },
+      {
+        text:4,
+        step:'undo',
+        p:false,
+        d:false
+      }
+    ];
+    flaginit(nInfo);
+    function flaginit(nInfo){
+      var s='';
+      var t='';
+      for(var i=0;i<8;i++){
+        t=(i==0?'first':
+             8?'last':'');
+        s+='<li class="m-flag " style="z-index: '+(8-i)+'">';
+        s+='<div class="u-flag-right '+t+' '+nInfo[i].step+'">'
+        if(nInfo[i].p){
+          s+='<i class="p u-icon u-icon-p"></i>'
+        }
+        if(nInfo[i].d){
+          s+='<i class="d u-icon u-icon-d"></i>'
+        }
+        s+='<span class="m">'+nInfo[i].text+'月</span>';
+        s+='</div></li>'
+      }
+      $('.m-flag-box').append(s);
+    }
+
+    var arrT=[
+      {
+
+      }
+    ];
+
+    //遍历出table
+    function outputTable (arrT){
+
+    }
+    //隐藏和显示对应行
   </script>
 </body>
 </html>
