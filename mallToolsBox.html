@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" id="viewport" content="width=400">
+  <meta name="keywords" content="工具箱" />
+  <meta name="description" content="工具箱" />
+  <title>工具箱</title>
+  <!-- bootstrap & fontawesome -->
+  <link rel="stylesheet" href="res/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+  <!-- page specific plugin styles -->
+
+  <!-- text fonts -->
+  <link rel="stylesheet" href="res/fonts/fonts.googleapis.com.css" />
+
+  <!-- ace styles -->
+
+  <!--        swiper-->
+  <link rel="stylesheet" href="./lib/idangerous.swiper.css">
+  <link href="res/bootstrap.css" rel="stylesheet">
+  <link href="res/btl-global.css" rel="stylesheet">
+
+  <script src="lib/jquery.js"></script>
+  <!--[if lte IE 9]>
+  <script src="lib/respond.min.js"></script>
+  <script src="lib/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="res/bootstrap.min.js"></script>
+  <!-- banner所需的插件js -->
+  <script src="lib/idangerous.swiper.min.js"></script>
+  <!--<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />-->
+  <!--<link href="favicon.ico" rel="bookmark icon" />-->
+
+  <!--[if lte IE 9]>
+		<![endif]-->
+
+  <!--[if lte IE 9]>
+		<![endif]-->
+
+  <!-- inline styles related to this page -->
+
+  <!-- ace settings handler -->
+  <script src="res/js/ace-extra.min.js"></script>
+  <!--  时间所需的文件-->
+  <link rel="stylesheet" href="res/css/bootstrap-datetimepicker.min.css">
+  <script src="lib/bootstrap-datetimepicker.js"></script>
+  <script src="lib/bootstrap-datetimepicker.fr.js"></script>
+</head>
+
+<body class="f-wh100">
+  <div class="g-head-m">
+    <div class="m-hot-line f-cb">
+      <div class="f-fr">
+        <span class="cc">服务热线：400-830-5721</span>
+      </div>
+    </div>
+  </div>
+  <div class="g-body-m ">
+    <div class="m-menu-m f-cb">
+      <div class="m-title-img f-mr20 f-fl">
+        <img src="./images/mall_title.png" alt="">
+      </div>
+      <div class="m-nav-m f-fl">
+        <ul class="nav-m f-cb">
+          <li class=""><a href="mallIndex.html" class="nav-i">首页</a></li>
+          <li><a href="mallInfoCenter.html" class="nav-i">资讯中心</a></li>
+          <li><a href="mallToolsBox.html" class="nav-i z-active">工具箱</a></li>
+          <li><a href="mallExamples.html" class="nav-i">案例库</a></li>
+          <li><a href="###" class="nav-i">国际车展</a></li>
+          <li><a href="###" class="nav-i">专营店中心</a></li>
+        </ul>
+      </div>
+      <div class="m-host-m f-fr">
+        <span class="host">广州风日专营店</span>
+        <span class="tips">9</span>
+      </div>
+    </div>
+    <div class="m-crumb-b">
+      <div class="wrap">
+        <i class="u-icon u-icon-location-m"></i><span> > </span><a href="###" class="crm act">工具箱</a>
+      </div>
+    </div>
+    <div class="m-main-wrap">
+      <div class="m-box-m">
+        <div class="hd">
+          <span class="f">分类：</span>
+          <select class="s" name="" id="">
+            <option value="">运营手册</option>
+          </select>
+        </div>
+        <div class="bd">
+          <div class="j-con">
+           <!--<ul class="list-box">
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+            <li class="item f-cb">
+              <a href="###" class="">
+                <span class="l-1">【操作指引】</span>
+                <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>
+                <span class="r-1"> 所属月份： 12</span>
+                <span class="r-2">2016-03-15</span>
+              </a>
+              <a href="###" class="">
+                <span class="f-1"> 立即下载</span>
+                <span class="f-2">（1234次）</span>
+              </a>
+            </li>
+          </ul>-->
+          </div>
+          <div class="list-page j-page f-cb">
+             <!--<ul >
+              <li class=""><a href="" class="b pc j-b">&lt;&lt;</a></li>
+              <li class=" "><a href="" class=" pc j-pc">1</a></li>
+              <li class=""><a href="" class=" pc  j-pc z-active">2</a></li>
+              <li class=""><a href="" class=" pc  j-pc">3</a></li>
+              <li class=""><a href="" class=" pc j-pc">4</a></li>
+              <li class=""><a href="javascript:void(0);" class=" pc ">...</a></li>
+              <li class=""><a href="" class=" pc j-pc">99</a></li>
+              <li class=""><a href="" class="n pc j-n ">&gt;&gt;</a></li>
+             </ul>-->
+          </div>
+
+          <!--<nav>
+            <ul class="pagination">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>-->
+        </div>
+        <div class="ft"></div>
+      </div>
+    </div>
+  </div>
+  <div class="g-foot-m">
+    <div class="u-copy">
+      &copy;2015东风日产版权所有 粤ICP备10218963号-3
+    </div>
+
+  </div>
+  <div class="m-pop-msg j-msg-h f-dn">
+    <div class="hd f-cb">
+      <span class="tt">新消息</span><span class="cc">（9）</span>
+    </div>
+  </div>
+  <div class="m-pop-msg j-msg">
+    <div class="hd f-cb">
+      <span class="tt">新消息</span><span class="cc">（9）</span><i class="u-icon u-icon-x f-fr j-x"></i>
+    </div>
+    <div class="bd">
+      <ul class="list-box">
+        <li>
+          <a href="###">
+            <dl class="list-item f-cb">
+              <dt>某某某：</dt>
+              <dd>
+                新消息新消息新消息新消息新消息新消息新消息新消息新消息
+              </dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="###">
+            <dl class="list-item f-cb">
+              <dt>某某某：</dt>
+              <dd>
+                新消息新消息新消息新消息新消息新消息新消息新消息新消息
+              </dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="###">
+            <dl class="list-item f-cb">
+              <dt>某某某：</dt>
+              <dd>
+                新消息新消息新消息新消息新消息新消息新消息新消息新消息
+              </dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="###">
+            <dl class="list-item f-cb">
+              <dt>某某某：</dt>
+              <dd>
+                新消息新消息新消息新消息新消息新消息新消息新消息新消息
+              </dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="###">
+            <dl class="list-item f-cb">
+              <dt>某某某：</dt>
+              <dd>
+                新消息新消息新消息新消息新消息新消息新消息新消息新消息
+              </dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="###">
+            <dl class="list-item f-cb">
+              <dt>某某某：</dt>
+              <dd>
+                新消息新消息新消息新消息新消息新消息新消息新消息新消息
+              </dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ft f-cb">
+      <a href="###" class="f-fl toall">查看全部</a><a href="###" class="f-fr unall j-xx">忽略全部</a>
+    </div>
+  </div>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.pagination',
+        paginationClickable: true,
+        loop: true,
+        moveStartThreshold: 100
+      })
+      //右下角的消息栏 的隐藏和弹出
+    $('.j-x').on('click', function() {
+      $('.j-msg').slideToggle(500, function() {
+        $('.j-msg-h').show();
+      })
+    })
+    $('.j-xx').on('click', function() {
+      $('.j-msg').slideToggle(500)
+    })
+    $('.j-msg-h').on('click', function() {
+        $('.j-msg-h').hide();
+        $('.j-msg').slideToggle(500)
+      })
+      //分页的组件
+    //分页的加载
+    function loadPages(con,pc,pall){
+      pc=parseInt(pc)
+      pall=parseInt(pall)
+      $('.j-con').html('');
+      $('.j-con').append(con);
+      var $rt=$('.j-page');
+      $rt.html('');
+      //根据所有页数，和当前页数计算当前分页的显示
+      var page='';
+      var t=0;
+      var r=0;
+      var jn='j-n';
+      var jb='j-b';
+      var jpc='j-pc';
+      page +=' <ul >';
+      page +=liItem('',' &lt;&lt;',jb);
+      var len=0;
+      if(pc<=6){
+        len+=pc-1;
+      }else{
+        len+=5
+      }
+      if(pall-pc<=6&&pall-pc<2){
+         r=2-(pall-pc)
+          len+=r
+        }else {
+          r=0
+        }
+      var bpcl=len;
+      var pcl=len+1;
+
+      len+=1;
+      if(pc<=6&&pc<=3){
+         t=3-pc
+          len+=3-(pc)
+        }else if(pc<=6){
+          t=3-pc
+        }else {
+          t=-3
+        }
+      if(pall-pc<=6){
+        len+=pall-pc
+      }else{
+        len+=5
+      }
+      for(var i=1;i<=len;i++){
+        //前如果是前5个全显示
+        if(i<pcl){
+        if(pc<=6){
+          //前不满5全显示
+          if(i<=6){
+            page +=liItem('',i,jpc)
+          }
+        }else{
+            if(i<=2){
+              page +=liItem('',i,jpc)
+            }else if(i==3){
+              page +=liItem('###','...','')
+            }else if(i<=5){
+              page +=liItem('',(pc+i-6-r),jpc)
+            }else if(i>5){
+              page +=liItem('',(pc+i-6-r),jpc)
+            }
+        }
+          }else if(pcl==i){
+             page +=liItem('',pc,' z-active j-pc');
+
+        }else if(i>pcl){
+        if(pall-pc<=5){
+            if(i>=len-5){
+              page +=liItem('',(pall+i-len),jpc)
+            }
+          }else{
+            if(i<len-2){
+              page +=liItem('',(pc+i+t-3),jpc)
+
+            }else if(i==len-2){
+              page +=liItem('###','...','')
+            }else if(i<=len){
+              page +=liItem('',(pall+i-len),jpc)
+            }
+        }
+          }
+        //中间 前后显示1个
+
+        //后如果后剩5个全显示
+
+      }
+      page +=liItem('','&gt;&gt;','j-n')
+      page +=   '</ul>';
+      $rt.append(page);
+      loadClick();
+    }
+    //传入页面内容
+
+    //工具箱页面加载内容
+    var c=8;
+    function loadCon(c){
+      var s = '';
+      s+='<ul class="list-box">';
+      for(var i=0;i<c;i++){
+        s+='<li class="item f-cb">'+
+         ' <a href="###" class="">'+
+                '<span class="l-1">【操作指引】</span>'+
+               ' <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>'+
+               ' <span class="r-1"> 所属月份： 12</span>'+
+                '<span class="r-2">2016-03-15</span>'+
+              '</a>'+
+              '<a href="###" class="">'+
+                '<span class="f-1"> 立即下载</span>'+
+                '<span class="f-2">（1234次）</span>'+
+              '</a>'+
+            '</li>'
+      }
+      s+='</ul>'
+      return s
+    }
+    //var con = loadCon(p,n)
+   var con =loadCon(c);
+    loadPages(con,6,20);
+    function liItem(h,cc,a){
+      var at='';
+      var h='javascript:void(0);'
+      if($.isNumeric(cc)){
+        at='<li class=""><a href="'+h+'" class="n pc '+a+' " xg-nav="'+cc+'">'+cc+'</a></li>'
+      }else{
+        at='<li class=""><a href="'+h+'" class="n pc '+a+' " >'+cc+'</a></li>'
+      }
+      return at
+    }
+    var tapages=20
+    function loadClick(){
+      //首页点击
+      $('.j-b').on('click',function(){
+        loadPages(con,1,tapages);
+      })
+      //尾页点击
+      $('.j-n').on('click',function(){
+        loadPages(con,tapages,tapages);
+      })
+      //分页点击
+      $('[xg-nav]').each(function(index,el){
+        $(el).on('click',function(){
+          //con=loadCon($(this).attr('xg-nav'),20)
+          loadPages(con,$(this).attr('xg-nav'),20);
+        })
+      })
+    }
+    //点击切换
+  </script>
+</body>
+
+</html>

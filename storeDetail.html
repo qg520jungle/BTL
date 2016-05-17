@@ -6,9 +6,9 @@
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="viewport" id="viewport" content="width=400">
-  <meta name="keywords" content="新增国际车展" />
-  <meta name="description" content="新增国际车展" />
-  <title>新增国际车展</title>
+  <meta name="keywords" content="专营店详情" />
+  <meta name="description" content="专营店详情" />
+  <title>专营店详情</title>
   <!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="res/font-awesome/4.2.0/css/font-awesome.min.css" />
 
@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="res/fonts/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
+		<link rel="stylesheet" href="res/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
   <link href="res/bootstrap.css" rel="stylesheet">
   <link href="res/btl-global.css" rel="stylesheet">
@@ -31,9 +32,11 @@
   <!--<link href="favicon.ico" rel="bookmark icon" />-->
 
 		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="res/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="res/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
@@ -121,7 +124,7 @@
 
       <div class="m-display">
       <div class="m-crumb">
-        <i class="u-icon u-icon-location "></i><span>您所在的位置：</span><a href="###" >国际车展</a><span>></span><a href="###" class="z-active">新增国际车展</a>
+        <i class="u-icon u-icon-location "></i><span>您所在的位置：</span><a href="###" >国际车展</a><span>></span><a href="###" class="z-active">专营店详情</a>
       </div>
       <div class="m-wrap">
         <div class="m-t">
@@ -130,40 +133,46 @@
         <div class="m-c">
         <div class="container-fluid">
           <div class="row">
-          <div class="m-input-box ">
+          <div class="m-input-box f-cb">
+           <div class="  f-cb">
             <div class="f-cb">
-            <dl class="col-md-4 u-dl" xg-data-select="0">
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">城市：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
+              </dd>
+            </dl>
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">级别：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
+              </dd>
+            </dl>
+            <dl class="col-md-4 u-dl" >
               <dt class="large">展会名称：</dt>
               <dd>
                 <input type="text" class="u-input u-input-normal">
               </dd>
             </dl>
-            <dl class="col-md-4 u-dl" xg-data-select="1">
-              <dt class="large">媒体日：</dt>
-              <dd>
-                <input type="text" class="u-input u-input-small-l">-
-                <input type="text" class="u-input u-input-small-l">
-              </dd>
-            </dl>
-            <dl class="col-md-4 u-dl" xg-data-select="1">
-              <dt class="large">公众日：</dt>
-              <dd>
-                <input type="text" class="u-input u-input-small">-
-                <input type="text" class="u-input u-input-small">
-              </dd>
-            </dl>
-            <dl class="col-md-4 u-dl" xg-data-select="0">
-              <dt class="large">地点：</dt>
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">展期时间：</dt>
               <dd>
                 <input type="text" class="u-input u-input-normal">
               </dd>
             </dl>
-            <dl class="col-md-4 u-dl" xg-data-select="0">
-              <dt class="vlarge">*会主题展会主题：</dt>
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">主办单位：</dt>
               <dd>
                 <input type="text" class="u-input u-input-normal">
               </dd>
             </dl>
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">场馆信息：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
+              </dd>
+            </dl>
+            </div>
             </div>
           </div>
           </div>
@@ -172,84 +181,84 @@
       </div>
       <div class="m-wrap">
         <div class="m-t">
-          <span >东风日产参展要点</span>
+          <span >专营店信息</span>
         </div>
         <div class="m-c">
         <div class="container-fluid">
           <div class="row">
-          <div class="m-input-box ">
-            <div class="m-t2">
-              <span>日产</span>
+          <div class="m-input-box f-cb">
+          <div class="  f-cb">
+           <div class="m-t2">
+              <span>日产主担专营店</span>
             </div>
-            <div class="f-cb">
-            <dl class="col-md-4 u-dl" xg-data-select="0">
-              <dt class="large">关键信息：</dt>
+           <div class="f-cb">
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">店名：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal" value="齐齐哈尔华宇瑞通">
+              </dd>
+            </dl>
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">电话：</dt>
               <dd>
                 <input type="text" class="u-input u-input-normal">
               </dd>
             </dl>
-            <dl class="col-md-8 u-dl" xg-data-select="0">
-              <dt class="large">车展亮点：</dt>
-              <dd>
-                <input type="text" class="u-input u-input-normal">
-              </dd>
-            </dl>
-            </div>
-            <div class="m-t2">
-              <span>启辰</span>
-            </div>
-            <div class="f-cb">
-            <dl class="col-md-4 u-dl" xg-data-select="0">
-              <dt class="large">关键信息：</dt>
-              <dd>
-                <input type="text" class="u-input u-input-normal">
-              </dd>
-            </dl>
-            <dl class="col-md-8 u-dl" xg-data-select="0">
-              <dt class="large">车展亮点：</dt>
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">邮箱：</dt>
               <dd>
                 <input type="text" class="u-input u-input-normal">
               </dd>
             </dl>
             </div>
-            <div class="m-t2">
-              <span>展馆位置</span>
+           <div class="m-t2">
+              <span>日产协办专营店</span>
             </div>
-            <div class="f-cb">
-            <dl class="col-md-4 u-dl" xg-data-select="0">
-              <dt class="large"></dt>
+           <div class="f-cb">
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">店名：</dt>
+              <dd>
+                <div class="" >齐齐哈尔华宇瑞通;齐齐哈尔华宇瑞通</div>
+              </dd>
+            </dl>
+            </div>
+           <div class="m-t2">
+              <span>启辰主担专营店</span>
+            </div>
+           <div class="f-cb">
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">店名：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal" value="齐齐哈尔华宇瑞通">
+              </dd>
+            </dl>
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">电话：</dt>
               <dd>
                 <input type="text" class="u-input u-input-normal">
               </dd>
-              <dd class="u-img u-dl-a">
-                  <img src="http://lorempixel.com/200/116/" alt="" class="img">
+            </dl>
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">邮箱：</dt>
+              <dd>
+                <input type="text" class="u-input u-input-normal">
               </dd>
             </dl>
+            </div>
+           <div class="m-t2">
+              <span>启辰协办专营店</span>
+            </div>
+           <div class="f-cb">
+            <dl class="col-md-4 u-dl" >
+              <dt class="large">店名：</dt>
+              <dd>
+                <div class="" >齐齐哈尔华宇瑞通;齐齐哈尔华宇瑞通</div>
+              </dd>
+            </dl>
+            </div>
 
-            </div>
-            <div class="m-t2">
-              <span>展台预估面积</span>
-            </div>
-            <div class="f-cb">
-            <dl class="col-md-4 u-dl" xg-data-select="0">
-              <dt class="large">日产：</dt>
-              <dd>
-                <input type="text" class="u-input u-input-normal">
-              </dd>
-            </dl>
-            <dl class="col-md-8 u-dl" xg-data-select="0">
-              <dt class="large">启辰：</dt>
-              <dd>
-                <input type="text" class="u-input u-input-normal">
-              </dd>
-            </dl>
-            </div>
-             <dl class="col-md-4 u-dl col-md-offset-8">
-              <dt class="large"></dt>
-              <dd class="btn-psearch">
-                 <a href="javascript" class="u-btn btn btn-normal btn-main">确认</a> <a href="javascript" class="u-btn btn btn-normal btn-white ">返回</a>
-              </dd>
-            </dl>
+
+          </div>
           </div>
           </div>
           </div>
@@ -260,38 +269,67 @@
     </div>
   </div>
   <div class="g-foot"></div>
-  <script>
-    //退出系统
-    $('.j-login').on('mouseover',function(){
-      $('.j-login-pop').show();
-    });
-    $('.j-login').on('mouseout',function(){
-      $('.j-login-pop').hide();
-    });
+<script>
+  //退出系统
+  $('.j-login').on('mouseover',function(){
+    $('.j-login-pop').show();
+  });
+  $('.j-login').on('mouseout',function(){
+    $('.j-login-pop').hide();
+  });
 
-    //侧边栏的交互
-    $('.j-s1').on('click',function(){
-      if($(this).hasClass('z-active')){
-        $(this).removeClass('z-active');
-        $(this).parent().find('.j-side-snd').hide()
-      }else{
-        $(this).addClass('z-active');
-        $(this).parent().find('.j-side-snd').show()
-      }
-    });
-    $('.j-s2').on('click',function(){
-      if($(this).hasClass('z-active')){
-      }else{
-        $('.j-s2').removeClass('z-active');
-        $(this).addClass('z-active');
-      }
-    });
+  //侧边栏的交互
+  $('.j-s1').on('click',function(){
+    if($(this).hasClass('z-active')){
+      $(this).removeClass('z-active');
+      $(this).parent().find('.j-side-snd').hide()
+    }else{
+      $(this).addClass('z-active');
+      $(this).parent().find('.j-side-snd').show()
+    }
+  });
+  $('.j-s2').on('click',function(){
+    if($(this).hasClass('z-active')){
+    }else{
+      $('.j-s2').removeClass('z-active');
+      $(this).addClass('z-active');
+    }
+  });
+  var arrInput=[
+    '项目主要成员',
+    '部门',
+    '主要负责内容',
+    '办公室电话',
+    '手机',
+    '邮箱'
+  ];
+  var title='项目经理'
+// 加载输入列表
+//需要传入参数，标题，每个input的小标题
+  function loadInput(arrInput,title){
+    var str='';
+    if(title){
+      str+='<div class="m-t2"><span>';
+      str+=title;
+      str+='</span></div>'
+    }
 
-
-
-
-
-
-  </script>
+       str+='<div class="f-cb">';
+    for(var i=0;i<arrInput.length;i++){
+      str+='<dl class="col-md-6 u-dl" >'+
+              '<dt class="large">'+
+        arrInput[i]+'：</dt>'+
+              '<dd>'+
+                '<input type="text" class="u-input u-input-normal">'+
+              '</dd>'+
+            '</dl>';
+    }
+    str+='</div>'
+    $('.j-input-box').append(str);
+  }
+  $('.j-add-m-info').on('click',function(){
+    loadInput(arrInput,title);
+  })
+</script>
 </body>
 </html>

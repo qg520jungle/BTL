@@ -58,14 +58,14 @@
       </div>
       <div class="right">
         <ul class="f-cb operate">
-          <li>商城首页</li>
-          <li>导航页</li>
-          <li>修改密码</li>
-          <li>刷新</li>
-          <li>退出</li>
+          <li><i class="u-icon u-icon-mall-index"></i><span class="f-ml5">商城首页</span></li>
+          <li><i class="u-icon u-icon-nav"></i><span class="f-ml5">导航页</span></li>
+          <li><i class="u-icon u-icon-repsw"></i><span class="f-ml5">修改密码</span></li>
+          <li><i class="u-icon u-icon-reset"></i><span class="f-ml5">刷新</span></li>
+          <li><i class="u-icon u-icon-signout"></i><span class="f-ml5">退出</span></li>
           <li>
                <div class="j-login f-fr">
-      <i class="u-icon "></i>
+      <i class="u-icon u-icon-host-s"></i>
       <span class="host">用户名</span>
       <i class="u-icon-down"></i>
       <div class="m-login-pop j-login-pop">
@@ -98,8 +98,8 @@
       <div class="m-main-box f-cb">
         <div class="f-fl">
         <div class="m-calendar">
-          <ul class="u-tt f-cb">
-            <li class=""><a class="u-tab act j-March ">3月</a></li>
+          <ul class="u-tt f-cb j-tab-box">
+            <li class=""><a class="u-tab j-March " >3月</a></li>
             <li><a class="u-tab">4月</a></li>
             <li><a class="u-tab">5月</a></li>
             <li><a class="u-tab">6月</a></li>
@@ -146,13 +146,33 @@
                   <span class="title">未执行站点</span>
                 </li>
               </ul>
-
             </div>
           </div>
         </div>
         <div class="f-fl">
           <div class="m-main-card wait">
-
+            <div class="tt">
+              待办事项
+            </div>
+            <div class="cc">
+              <ul class="f-cb">
+                <li class="li-3">
+                  <i class="u-icon u-icon-unhandle "></i>
+                  <span class="title">待处理</span>
+                  <div class="title2">活动事项（<span class="s-red">5</span>）</div>
+                </li>
+                <li class="li-3">
+                  <i class="u-icon u-icon-unread "></i>
+                  <span class="title">今日未读</span>
+                  <div class="title2">消息提醒（<span class="s-red">5</span>）</div>
+                </li>
+                <li class="li-3">
+                  <i class="u-icon u-icon-unread3 "></i>
+                  <span class="title">三天内未读</span>
+                  <div class="title2">消息提醒（<span class="s-red">5</span>）</div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="f-fl">
@@ -484,7 +504,7 @@
                     '<span>'+cal[i].city+'</span>'+
                   '</div>'+
                   '<div>'+
-                    '<span>'+cal[i].dateStart+~+cal[i].dateEnd+'</span>'+
+                    '<span>'+cal[i].dateStart+'~'+cal[i].dateEnd+'</span>'+
                   '</div>'+
                 '</li>'
 
@@ -506,28 +526,28 @@
 
 //点击换下一个页面
 
-    $('.j-toleft').on('click',function(){
-      var $pages=$(this).parents('.j-box').find('.j-card-list');
-      var com=622;
-      $pages.stop(true,true);
-      $pages.each(function(index,el){
-        var l=$(el).css('left');
-        l=l.replace("px","");
-        var numl=parseInt(l);
-          if($(el).css('left')==(index*com+'px')){
-            $(el).animate({
-              left: index*com+40+'px'
-            },100).animate({
-              left: index*com+'px'
-            });
-          }else{
-            $(el).animate({
-              left: (numl+com)+'px'
-            });
-          }
-      });
-    })
-    $('.j-toright').on('click',function(){
+  $('.j-toleft').on('click',function(){
+    var $pages=$(this).parents('.j-box').find('.j-card-list');
+    var com=622;
+    $pages.stop(true,true);
+    $pages.each(function(index,el){
+      var l=$(el).css('left');
+      l=l.replace("px","");
+      var numl=parseInt(l);
+        if($(el).css('left')==(index*com+'px')){
+          $(el).animate({
+            left: index*com+40+'px'
+          },100).animate({
+            left: index*com+'px'
+          });
+        }else{
+          $(el).animate({
+            left: (numl+com)+'px'
+          });
+        }
+    });
+  })
+  $('.j-toright').on('click',function(){
        var $pages=$(this).parents('.j-box').find('.j-card-list');
       var com=622;
       $pages.stop(true,true);
@@ -548,7 +568,26 @@
           }
     })
     })
-
+  //tab标签切换
+  $('.j-tab-box').find('.u-tab').each(function(index,el){
+    $(el).on('click',function(){
+      $('.j-tab-box').find('.u-tab').removeClass('act');
+      $(el).addClass('act');
+      //选中的的cardsshow
+    })
+  })
+  //选中月份
+  var month=3;
+  function selectMonth(month){
+    $('.j-tab-box').find('.u-tab').removeClass('act');
+    $('.j-tab-box').find('.u-tab').each(function(index,el){
+      if(index==(month-3)){
+        $(el).addClass('act');
+        //初始化的cardsshow
+      }
+    })
+  }
+  selectMonth(month);
 
   </script>
 </body>
