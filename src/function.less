@@ -88,6 +88,9 @@
 .f-no-border{
 	border: none !important;
 }
+.f-mtn{
+  margin-top: inherit;
+}
 .f-pr{
   position: relative;
 }
@@ -132,7 +135,12 @@
 .f-w130{
   width: 130px;
 }
-
+.f-w96{
+  width: 96px;
+}
+.f-w34{
+  width: 34px;
+}
 textarea, input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color]{
   &.z-input-error{
     border-color: #f59942;
@@ -143,12 +151,13 @@ textarea, input[type=text], input[type=password], input[type=datetime], input[ty
 }
 .z-input-error + span + i{
   background-position: -96px 0px;
+  position: relative
 }
-.xg-fc-backmsg{
+td .u-input-small+.xg-fc-backmsg{
     position: absolute;
     display: block;
-    left: 6px;
-    top: 3px;
+    left: 9px;
+    top: 12px;
     background-color: #fff;
 }
 .arrow (@tot: transparent;@tor: transparent;@tob: transparent;@tol: transparent;@w: 10px; ){
@@ -163,4 +172,20 @@ textarea, input[type=text], input[type=password], input[type=datetime], input[ty
   display: block;
   height: 0;
   width: 0;
+}
+.f-mr-xz{
+  margin-right: 190px;
+  position: relative;
+  z-index: 5;
+}
+.f-mt-102{
+  margin-top:-102px;
+}
+.f-img-index{
+  width: 1000px;
+  height: 300px;
+}
+.f-img-cz{
+  width: 300px;
+  height: 110px;
 }

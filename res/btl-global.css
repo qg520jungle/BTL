@@ -371,6 +371,106 @@ textarea ::-webkit-scrollbar-thumb {
   width: 20px;
   background-position: -74px -52px;
 }
+.u-icon-jindu {
+  height: 20px;
+  width: 20px;
+  background-position: -99px -3px;
+}
+.u-icon-manyi {
+  height: 24px;
+  width: 24px;
+  background-position: -121px -1px;
+}
+.u-icon-rizhi {
+  height: 21px;
+  width: 21px;
+  background-position: -27px -52px;
+}
+.u-icon-fuwu {
+  height: 22px;
+  width: 23px;
+  background-position: -1px -1px;
+}
+.u-icon-guoji {
+  height: 20px;
+  width: 20px;
+  background-position: -26px -3px;
+}
+.u-icon-chajian {
+  height: 22px;
+  width: 22px;
+  background-position: -48px -1px;
+}
+.u-icon-zhandian-gys {
+  height: 21px;
+  width: 24px;
+  background-position: -146px -2px;
+}
+.u-icon-dingzhi {
+  height: 22px;
+  width: 23px;
+  background-position: -73px -2px;
+}
+.u-icon-zhanghao {
+  height: 23px;
+  width: 24px;
+  background-position: -173px -1px;
+}
+.u-icon-xitong {
+  height: 21px;
+  width: 24px;
+  background-position: -2px -27px;
+}
+.u-icon-zhanju {
+  height: 23px;
+  width: 21px;
+  background-position: -27px -26px;
+}
+.u-icon-jingpin {
+  height: 20px;
+  width: 20px;
+  background-position: -123px -28px;
+}
+.u-icon-xiaoneng {
+  height: 21px;
+  width: 21px;
+  background-position: -51px -28px;
+}
+.u-icon-zhixing {
+  height: 23px;
+  width: 20px;
+  background-position: -74px -27px;
+}
+.u-icon-shouye {
+  height: 21px;
+  width: 24px;
+  background-position: -172px -26px;
+}
+.u-icon-caozuo {
+  height: 22px;
+  width: 24px;
+  background-position: -147px -26px;
+}
+.u-icon-guihua {
+  height: 20px;
+  width: 21px;
+  background-position: -98px -28px;
+}
+.u-icon-manyipingjia {
+  height: 22px;
+  width: 18px;
+  background-position: -51px -51px;
+}
+.u-icon-fuwuguanli {
+  height: 24px;
+  width: 21px;
+  background-position: -125px -50px;
+}
+.u-icon-zhandian {
+  height: 22px;
+  width: 24px;
+  background-position: -99px -51px;
+}
 .u-icon-down-right {
   position: absolute;
   border-color: transparent;
@@ -733,6 +833,9 @@ textarea ::-webkit-scrollbar-thumb {
 .u-input-small {
   width: 80px;
 }
+.u-input-small-m {
+  width: 89px;
+}
 .u-input-small-l {
   width: 100px;
 }
@@ -873,6 +976,9 @@ textarea ::-webkit-scrollbar-thumb {
 }
 .u-dl dt.vlarge {
   width: 120px;
+}
+.u-dl dt.vtlarge {
+  width: 140px;
 }
 .u-dl dt.c1 {
   width: 120px;
@@ -1400,6 +1506,9 @@ textarea ::-webkit-scrollbar-thumb {
 .f-no-border {
   border: none !important;
 }
+.f-mtn {
+  margin-top: inherit;
+}
 .f-pr {
   position: relative;
 }
@@ -1442,6 +1551,12 @@ textarea ::-webkit-scrollbar-thumb {
 .f-w130 {
   width: 130px;
 }
+.f-w96 {
+  width: 96px;
+}
+.f-w34 {
+  width: 34px;
+}
 textarea.z-input-error,
 input[type=text].z-input-error,
 input[type=password].z-input-error,
@@ -1464,13 +1579,30 @@ input[type=color].z-input-error {
 }
 .z-input-error + span + i {
   background-position: -96px 0px;
+  position: relative;
 }
-.xg-fc-backmsg {
+td .u-input-small + .xg-fc-backmsg {
   position: absolute;
   display: block;
-  left: 6px;
-  top: 3px;
+  left: 9px;
+  top: 12px;
   background-color: #fff;
+}
+.f-mr-xz {
+  margin-right: 190px;
+  position: relative;
+  z-index: 5;
+}
+.f-mt-102 {
+  margin-top: -102px;
+}
+.f-img-index {
+  width: 1000px;
+  height: 300px;
+}
+.f-img-cz {
+  width: 300px;
+  height: 110px;
 }
 html {
   height: 100%;
@@ -1501,7 +1633,7 @@ iframe {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 50;
 }
 .g-body {
   min-width: 1200px;
@@ -1927,7 +2059,7 @@ iframe {
 }
 .m-pop-msg .bd {
   height: 140px;
-  overflow: hidden;
+  overflow: auto;
 }
 .m-pop-msg .bd .list-item {
   margin: 0;
@@ -1951,6 +2083,29 @@ iframe {
 }
 .m-pop-msg .ft .toall,
 .m-pop-msg .ft .unall {
+  color: #333;
+  font-size: 15px;
+  height: 26px;
+  line-height: 26px;
+}
+.m-pop-msg-detail {
+  position: fixed;
+  bottom: 0px;
+  right: 243px;
+  width: 203px;
+  background-color: #fff;
+  border-top: 1px solid #f3f3f3;
+  border-left: 2px solid #dadada;
+  border-right: 2px solid #b6b6b6;
+  padding: 4px 10px;
+  z-index: 11;
+}
+.m-pop-msg-detail .bd {
+  height: 160px;
+  overflow: auto;
+}
+.m-pop-msg-detail .ft .toall,
+.m-pop-msg-detail .ft .unall {
   color: #333;
   font-size: 15px;
   height: 26px;
@@ -2216,6 +2371,7 @@ iframe {
   /*margin-left: 160px;*/
 }
 .m-crumb {
+  display: none;
   margin-top: 114px;
   height: 40px;
   line-height: 40px;
@@ -2241,6 +2397,7 @@ iframe {
 .m-display {
   margin-left: 214px;
   margin-bottom: 20px;
+  margin-top: 120px;
   /* padding-bottom: 20px;*/
   margin-right: 10px;
 }
@@ -2333,11 +2490,19 @@ iframe {
 .m-btn-box .u-btn {
   margin-left: 10px;
 }
+.m-btn-box.f-mr-xz {
+  margin-right: 190px;
+  position: relative;
+  z-index: 5;
+}
 .m-table-f {
   margin-top: 30px;
   margin-left: 17px;
   margin-right: 10px;
   font-size: 13px;
+}
+.m-table-f.f-mtn {
+  margin-top: inherit;
 }
 .m-table-n {
   margin-left: 17px;
@@ -2409,6 +2574,9 @@ iframe {
 .m-table .z-yes {
   color: #89c094;
 }
+.m-table.f-mt-102 {
+  margin-top: -102px;
+}
 .pagination {
   margin-top: 0;
 }
@@ -2438,7 +2606,7 @@ iframe {
   background: #000;
   opacity: .5;
   filter: alpha(opacity=50);
-  z-index: 10;
+  z-index: 51;
 }
 .m-lgifram {
   width: 1090px;
@@ -2459,7 +2627,7 @@ iframe {
   margin-left: -356px;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
-  z-index: 11;
+  z-index: 52;
 }
 .m-popup.full {
   width: 100%;
@@ -2729,6 +2897,13 @@ iframe {
 .m-lgmodal {
   width: 1100px;
   margin: 10px 125px;
+}
+.m-smmodal {
+  width: 800px;
+  height: 500px;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: 120px;
 }
 .m-table-list {
   max-height: 520px;
@@ -3146,7 +3321,7 @@ iframe {
 }
 .m-table-s .right {
   position: absolute;
-  left: 340px;
+  left: 410px;
 }
 .m-table-s .right .tbody {
   width: 700px;
@@ -3417,6 +3592,7 @@ iframe {
 }
 .m-node-list li {
   float: left;
+  height: 250px;
   margin-left: 8px;
   margin-right: 36px;
   margin-bottom: 0px;
@@ -3443,6 +3619,11 @@ iframe {
   margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+.m-btn-box-xz {
+  position: relative;
+  top: 41px;
+  height: 31px;
 }
 .swiper-container {
   width: 1000px;
@@ -3486,10 +3667,15 @@ iframe {
   display: inline-block;
   width: 20px;
   height: 4px;
-  background-image: url(../res/img/unact.png);
+  background-image: url(img/unact.png);
   margin-right: 0px;
   cursor: pointer;
 }
 .swiper-active-switch {
-  background-image: url(../res/img/act.png);
+  background-image: url(img/act.png);
+}
+.help-block {
+  display: inline-block;
+  margin-left: 8px;
+  color: red;
 }

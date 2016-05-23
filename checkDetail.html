@@ -10,15 +10,12 @@
   <meta name="description" content="双月审核" />
   <title>双月审核</title>
   <!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="res/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="res/fonts/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="res/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
   <link href="res/bootstrap.css" rel="stylesheet">
   <link href="res/btl-global.css" rel="stylesheet">
@@ -29,16 +26,7 @@
   <script src="lib/html5shiv-printshiv.min.js"></script>
   <![endif]-->
   <script src="res/bootstrap.min.js"></script>
-  <!--<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />-->
-  <!--<link href="favicon.ico" rel="bookmark icon" />-->
 
-		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="res/css/ace-part2.min.css" class="ace-main-stylesheet" />
-		<![endif]-->
-
-		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="res/css/ace-ie.min.css" />
-		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
@@ -48,7 +36,7 @@
  <link rel="stylesheet" href="res/css/bootstrap-datetimepicker.min.css">
  <script src="lib/bootstrap-datetimepicker.js"></script>
  <script src="lib/bootstrap-datetimepicker.fr.js"></script>
-
+ <script src="lib/jquery.formCheck.js"></script>
 </head>
 <body>
   <div class="g-head f-cb">
@@ -119,14 +107,11 @@
           </ul>
         </li>
 
-        <li><a href="###" class="f-pr  j-s1"><i class=" iconfont chading"></i><span class="tab">进度管理</span><div class="u-arrow-right"></div></a></li>
-        <li><a href="###" class="f-pr  j-s1"><i class=" iconfont chading"></i><span class="tab">满意度评价</span><div class="u-arrow-right"></div></a></li>
-        <li><a href="###" class="f-pr  j-s1"><i class=" iconfont chading"></i><span class="tab">站点日志</span><div class="u-arrow-right"></div></a></li>
+        <li><a href="###" class="f-pr  j-s1"><i class=" u-icon u-icon-jindu"></i><span class="tab">进度管理</span><div class="u-arrow-right"></div></a></li>
+        <li><a href="###" class="f-pr  j-s1"><i class=" u-icon u-icon-manyipingjia"></i><span class="tab">满意度评价</span><div class="u-arrow-right"></div></a></li>
+        <li><a href="###" class="f-pr  j-s1"><i class=" u-icon u-icon-zhandian"></i><span class="tab">站点日志</span><div class="u-arrow-right"></div></a></li>
       </ul>
     </div>
-      <div class="m-crumb">
-        <i class="u-icon u-icon-location "></i><span>您所在的位置：</span><a href="###">双月申请</a><span class="s-ff-c"> > </span><a href="###" class="z-active">双月审核</a><span class="s-ff-c"> > </span><a href="###" class="z-active">查看详情</a>
-      </div>
       <div class="m-display">
         <div class="m-wrap">
           <div class="m-t">
@@ -419,8 +404,8 @@
                     <input type="text" class="u-input">
                   </td>
                   <td>
-                    <span class="add-a-row u-btn btn btn-grey">+</span>
-                    <span class="divide-a-row u-btn btn btn-grey">-</span>
+                    <span class="add-a-row u-btn btn btn-grey f-w34">+</span>
+                    <span class="divide-a-row u-btn btn btn-grey f-w34">-</span>
                   </td>
                 </tr>
               </tbody>
@@ -473,8 +458,8 @@
                     <input type="text" class="u-input  u-input-small">
                   </td>
                   <td>
-                    <span class="add-a-row u-btn btn btn-grey">+</span>
-                    <span class="divide-a-row u-btn btn btn-grey">-</span>
+                    <span class="add-a-row u-btn btn btn-grey f-w34">+</span>
+                    <span class="divide-a-row u-btn btn btn-grey f-w34">-</span>
                   </td>
                 </tr>
                 <tr>
@@ -491,7 +476,7 @@
                     <input  type="text" value="" readonly class="form_datetime2 u-input u-input-time-s">
                   </td>
                   <td>
-                    <input type="text" class="u-input u-input-small">
+                    <input type="text" class="u-input u-input-small xg-cost">
                   </td>
                   <td></td>
                   <td></td>
@@ -762,12 +747,13 @@
                     '<input  type="text" value="" readonly class="form_datetime2 u-input u-input-time-s">'+
                 '</td>'+
                 '<td>'+
-                  '<input type="text" class="u-input u-input-small">'+
+                  '<input type="text" class="xg-cost u-input u-input-small" >'+
                 '</td>'+
                 '<td></td>'+
                 '<td></td>'+
               '</tr>';
       addRow($(this).parents('tbody'),s);
+      costV();
     });
     $('.divide-a-row').on('click',function(){
       divideRow($(this).parents('tbody'));
@@ -829,7 +815,78 @@
 		minView: 2,
 		forceParse: 0});
     }
+    $(".form_datetime1").on('blur',function(){
+      var newSDate=$(this).val();
+      console.log($(this).context)
+      console.log($(this).context.value)
+      $(this).next().datetimepicker({
+       format: 'yyyy/mm/dd',
+       language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        startDate: newSDate,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0});
+    }
+      )
+    $(".form_datetime2").on('blur',function(){
+      var newSDate=$(this).val();
+      $(".form_datetime1").datetimepicker({
+       format: 'yyyy/mm/dd',
+       language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        endDate: newSDate,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0});
+    }
+    )
 
+
+    var arrBool={
+      cost:false
+    }
+ //费用验证
+    function costV(){
+    $('.xg-cost').on('blur', function () {
+        $(this).formCheck(
+            {
+                checkModel: 'notEmptyCheck',
+                ref:/^[0-9]{1,32}$/,
+                msg: '输入错误',
+                emptyMsg: '费用不能为空'
+            }
+        );
+        if (this.resultBool) {
+            //通过
+            $(this).removeClass('z-input-error');
+          $(this).next('.xg-fc-backmsg').remove();
+          arrBool.cost=true;
+        } else {
+            //没通过
+          arrBool.cost=false;
+           $(this).parent().css({
+              position: 'relative'
+            });
+          if(!$(this).next('.xg-fc-backmsg')){
+            var str='<span class="xg-fc-backmsg-small" style="display: none;">'+$(this).attr('data-xg-msg')+'</span>';
+          $(this).after(str);
+          }
+            $(this).next('.xg-fc-backmsg').fadeOut(2000,'linear').on('click',function(){$(this).stop(true,true)});
+            $(this).addClass('z-input-error');
+        }
+        $(this).nextAll('i').show();
+    }).on('click',function(){
+      $(this).next('.xg-fc-backmsg').stop(true,true);
+    });
+    }
+    costV();
   </script>
 </body>
 </html>

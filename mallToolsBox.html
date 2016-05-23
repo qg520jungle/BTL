@@ -287,7 +287,7 @@
       <span class="tt">新消息</span><span class="cc">（9）</span><i class="u-icon u-icon-x f-fr j-x"></i>
     </div>
     <div class="bd">
-      <ul class="list-box">
+      <ul class="list-box j-list-box">
         <li>
           <a href="###">
             <dl class="list-item f-cb">
@@ -354,6 +354,15 @@
       <a href="###" class="f-fl toall">查看全部</a><a href="###" class="f-fr unall j-xx">忽略全部</a>
     </div>
   </div>
+  <div class="m-pop-msg-detail j-msg-d f-dn">
+
+    <p class="bd">
+      新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息新消息
+    </p>
+    <div class="ft f-cb">
+      <a href="###" class="f-fl toall j-x-d">确定</a>
+    </div>
+  </div>
   <script>
     var mySwiper = new Swiper('.swiper-container', {
         pagination: '.pagination',
@@ -366,6 +375,7 @@
       $('.j-msg').slideToggle(500, function() {
         $('.j-msg-h').show();
       })
+      $('.j-msg-d').hide();
     })
     $('.j-xx').on('click', function() {
       $('.j-msg').slideToggle(500)
@@ -374,157 +384,242 @@
         $('.j-msg-h').hide();
         $('.j-msg').slideToggle(500)
       })
+    //消息详细弹出
+    $('.j-list-box li').each(function(index,el){
+      $(el).on('click',function(){
+        $('.j-msg-d').show();
+      });
+    })
+    $('.j-msg-d').find('.j-x-d').on('click',function(){
+        $('.j-msg-d').hide();
+    })
       //分页的组件
     //分页的加载
-    function loadPages(con,pc,pall){
-      pc=parseInt(pc)
-      pall=parseInt(pall)
-      $('.j-con').html('');
-      $('.j-con').append(con);
-      var $rt=$('.j-page');
-      $rt.html('');
-      //根据所有页数，和当前页数计算当前分页的显示
-      var page='';
-      var t=0;
-      var r=0;
-      var jn='j-n';
-      var jb='j-b';
-      var jpc='j-pc';
-      page +=' <ul >';
-      page +=liItem('',' &lt;&lt;',jb);
-      var len=0;
-      if(pc<=6){
-        len+=pc-1;
-      }else{
-        len+=5
+//    function loadPages(con,pc,pall){
+//      pc=parseInt(pc)
+//      pall=parseInt(pall)
+//      $('.j-con').html('');
+//      $('.j-con').append(con);
+//      var $rt=$('.j-page');
+//      $rt.html('');
+//      //根据所有页数，和当前页数计算当前分页的显示
+//      var page='';
+//      var t=0;
+//      var r=0;
+//      var jn='j-n';
+//      var jb='j-b';
+//      var jpc='j-pc';
+//      page +=' <ul >';
+//      page +=liItem('',' &lt;&lt;',jb);
+//      var len=0;
+//      if(pc<=6){
+//        len+=pc-1;
+//      }else{
+//        len+=5
+//        if(pall==7){
+//          len+=1
+//        }
+//      }
+//      if(pall-pc<=6&&pall-pc<2){
+//         r=2-(pall-pc)
+//         if(pall<=7){
+//           r=0
+//         }
+//        if(pall==8){
+//          r=2
+//        }
+//          len+=r
+//        }else {
+//          r=0
+//        }
+//      var bpcl=len;
+//      var pcl=len+1;
+//
+//      len+=1;
+//      if(pc<=6&&pc<=3){
+//         t=3-pc
+//         if(pall<=7){
+//           t=0
+//         }
+//         if(pall==8&&pc==2){
+//           t=0
+//         }
+//          len+=t
+//        }else if(pc<=6){
+//          t=3-pc
+//        }else {
+//          t=-3
+//        }
+//      if(pall-pc<=6){
+//        len+=pall-pc
+//      }else{
+//        len+=5
+//      }
+//      for(var i=1;i<=len;i++){
+//        //前如果是前5个全显示
+//        if(i<pcl){
+//        if(pc<=6||pall==8||pall==7){
+//          //前不满5全显示
+//          var p=6
+//          if(pc<=6){
+//            p=6
+//          }else if(pall==8&&pc==8){
+//            p=7
+//          }else if(pall==7&&pc==7){
+//            p=6
+//          }
+//
+//          if(i<=p){
+//            page +=liItem('',i,jpc)
+//          }
+//        }else{
+//            if(i<=2){
+//              page +=liItem('',i,jpc)
+//            }else if(i==3){
+//              page +=liItem('###','...','')
+//            }else if(i<=5){
+//              page +=liItem('',(pc+i-6-r),jpc)
+//            }else if(i>5){
+//              page +=liItem('',(pc+i-6-r),jpc)
+//            }
+//        }
+//          }else if(pcl==i){
+//             page +=liItem('',pc,' z-active j-pc');
+//
+//        }else if(i>pcl){
+//        if(pall-pc<=6||pall==8){
+//          /*var p=6
+//          if(pall-pc<=6){
+//            p=len-6
+//          }else if(pall==8)*/
+//            if(i>=len-6){
+//              page +=liItem('',(pall+i-len),jpc)
+//            }
+//          }else{
+//            if(i<len-2){
+//              page +=liItem('',(pc+i+t-3),jpc)
+//
+//            }else if(i==len-2){
+//              page +=liItem('###','...','')
+//            }else if(i<=len){
+//              page +=liItem('',(pall+i-len),jpc)
+//            }
+//        }
+//          }
+//        //中间 前后显示1个
+//
+//        //后如果后剩5个全显示
+//
+//      }
+//      page +=liItem('','&gt;&gt;','j-n')
+//      page +=   '</ul>';
+//      $rt.append(page);
+//      loadClick();
+//    }
+//    //传入页面内容
+//
+//    //工具箱页面加载内容
+//    var c=8;
+//    function loadCon(c){
+//      var s = '';
+//      s+='<ul class="list-box">';
+//      for(var i=0;i<c;i++){
+//        s+='<li class="item f-cb">'+
+//         ' <a href="###" class="">'+
+//                '<span class="l-1">【操作指引】</span>'+
+//               ' <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>'+
+//               ' <span class="r-1"> 所属月份： 12</span>'+
+//                '<span class="r-2">2016-03-15</span>'+
+//              '</a>'+
+//              '<a href="###" class="">'+
+//                '<span class="f-1"> 立即下载</span>'+
+//                '<span class="f-2">（1234次）</span>'+
+//              '</a>'+
+//            '</li>'
+//      }
+//      s+='</ul>'
+//      return s
+//    }
+//    //var con = loadCon(p,n)
+//   var con =loadCon(c);
+//    var tapages=9
+//    loadPages(con,1,tapages);
+//    function liItem(h,cc,a){
+//      var at='';
+//      var h='javascript:void(0);'
+//      if($.isNumeric(cc)){
+//        at='<li class=""><a href="'+h+'" class="n pc '+a+' " xg-nav="'+cc+'">'+cc+'</a></li>'
+//      }else{
+//        at='<li class=""><a href="'+h+'" class="n pc '+a+' " >'+cc+'</a></li>'
+//      }
+//      return at
+//    }
+//
+//    function loadClick(){
+//      //首页点击
+//      $('.j-b').on('click',function(){
+//        loadPages(con,1,tapages);
+//      })
+//      //尾页点击
+//      $('.j-n').on('click',function(){
+//        loadPages(con,tapages,tapages);
+//      })
+//      //分页点击
+//      $('[xg-nav]').each(function(index,el){
+//        $(el).on('click',function(){
+//          //con=loadCon($(this).attr('xg-nav'),20)
+//          loadPages(con,$(this).attr('xg-nav'),tapages);
+//        })
+//      })
+//    }
+    //分页的算法改进
+    // 判断边缘
+    function theEdge(pc,ap,mid){
+      var edge={
+        flen:0,
+        blen:0,
+        mfor:0,
+        maft:0
       }
-      if(pall-pc<=6&&pall-pc<2){
-         r=2-(pall-pc)
-          len+=r
-        }else {
-          r=0
-        }
-      var bpcl=len;
-      var pcl=len+1;
+      var mb=mid.mb;
+      var mn=mid.mn;
+      edge.mfor=pc-mb;
+      edge.maft=pc+mn;
+      edge.flen=pc-2-1>2?2:
+                pc-2-1<0?0:
+                pc-2-1;
+      edge.blen=ap-pc-2>2?2:
+                ap-pc-2<0?0:
+                ap-pc-2;
 
-      len+=1;
-      if(pc<=6&&pc<=3){
-         t=3-pc
-          len+=3-(pc)
-        }else if(pc<=6){
-          t=3-pc
-        }else {
-          t=-3
-        }
-      if(pall-pc<=6){
-        len+=pall-pc
-      }else{
-        len+=5
-      }
-      for(var i=1;i<=len;i++){
-        //前如果是前5个全显示
-        if(i<pcl){
-        if(pc<=6){
-          //前不满5全显示
-          if(i<=6){
-            page +=liItem('',i,jpc)
-          }
-        }else{
-            if(i<=2){
-              page +=liItem('',i,jpc)
-            }else if(i==3){
-              page +=liItem('###','...','')
-            }else if(i<=5){
-              page +=liItem('',(pc+i-6-r),jpc)
-            }else if(i>5){
-              page +=liItem('',(pc+i-6-r),jpc)
-            }
-        }
-          }else if(pcl==i){
-             page +=liItem('',pc,' z-active j-pc');
-
-        }else if(i>pcl){
-        if(pall-pc<=5){
-            if(i>=len-5){
-              page +=liItem('',(pall+i-len),jpc)
-            }
-          }else{
-            if(i<len-2){
-              page +=liItem('',(pc+i+t-3),jpc)
-
-            }else if(i==len-2){
-              page +=liItem('###','...','')
-            }else if(i<=len){
-              page +=liItem('',(pall+i-len),jpc)
-            }
-        }
-          }
-        //中间 前后显示1个
-
-        //后如果后剩5个全显示
-
-      }
-      page +=liItem('','&gt;&gt;','j-n')
-      page +=   '</ul>';
-      $rt.append(page);
-      loadClick();
+      return edge
     }
-    //传入页面内容
-
-    //工具箱页面加载内容
-    var c=8;
-    function loadCon(c){
-      var s = '';
-      s+='<ul class="list-box">';
-      for(var i=0;i<c;i++){
-        s+='<li class="item f-cb">'+
-         ' <a href="###" class="">'+
-                '<span class="l-1">【操作指引】</span>'+
-               ' <span class="l-2">服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿服务体验营传播软文稿</span>'+
-               ' <span class="r-1"> 所属月份： 12</span>'+
-                '<span class="r-2">2016-03-15</span>'+
-              '</a>'+
-              '<a href="###" class="">'+
-                '<span class="f-1"> 立即下载</span>'+
-                '<span class="f-2">（1234次）</span>'+
-              '</a>'+
-            '</li>'
+    // 判断前长
+    function forLen(pc){
+      var flen=pc-2-1>2?2:
+                pc-2-1<0?0:
+                pc-2-1;
+      return flen
+    }
+    // 判断中长
+    function midLen(pc,ap){
+      var mid={
+        mb:0,
+        mn:0
       }
-      s+='</ul>'
-      return s
+      pc<3?mb=pc-1:mb=2;
+      pc>ap-2?mn=ap-pc:mn=2;
+      return mid
     }
-    //var con = loadCon(p,n)
-   var con =loadCon(c);
-    loadPages(con,6,20);
-    function liItem(h,cc,a){
-      var at='';
-      var h='javascript:void(0);'
-      if($.isNumeric(cc)){
-        at='<li class=""><a href="'+h+'" class="n pc '+a+' " xg-nav="'+cc+'">'+cc+'</a></li>'
-      }else{
-        at='<li class=""><a href="'+h+'" class="n pc '+a+' " >'+cc+'</a></li>'
-      }
-      return at
+    // 判断后长
+    function behLen(pc,ap){
+      var blen=ap-pc-2>2?2:
+                ap-pc-2<0?0:
+                ap-pc-2;
+      return blen
     }
-    var tapages=20
-    function loadClick(){
-      //首页点击
-      $('.j-b').on('click',function(){
-        loadPages(con,1,tapages);
-      })
-      //尾页点击
-      $('.j-n').on('click',function(){
-        loadPages(con,tapages,tapages);
-      })
-      //分页点击
-      $('[xg-nav]').each(function(index,el){
-        $(el).on('click',function(){
-          //con=loadCon($(this).attr('xg-nav'),20)
-          loadPages(con,$(this).attr('xg-nav'),20);
-        })
-      })
-    }
-    //点击切换
+    // 判断是否有省略
+    function
   </script>
 </body>
 
