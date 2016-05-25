@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" id="viewport" content="width=400">
+  <meta name="keywords" content="单选框列表" />
+  <meta name="description" content="单选框列表" />
+  <title>单选框列表</title>
+  <link href="res/bootstrap.css" rel="stylesheet">
+  <link href="res/btl-global.css" rel="stylesheet">
+  <script src="lib/jquery.js"></script>
+  <!--[if lte IE 9]>
+  <script src="lib/respond.min.js"></script>
+  <script src="lib/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="res/bootstrap.min.js"></script>
+  <!--<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />-->
+  <!--<link href="favicon.ico" rel="bookmark icon" />-->
+
+</head>
+<body>
+ <div class="g-body f-cb">
+
+    <div class="m-main">
+   <div class="m-display">
+        <div class="m-wrap">
+          <div class="m-t">
+            <span>上传文件</span>
+          </div>
+          <div class="m-c">
+            <!--<div class="m-t2">
+              <span>活动名称——2016广州国际车展</span>
+            </div>-->
+            <!--<div class="container-fluid">
+            <div class="row">
+           <div class="m-input-box info f-cb">
+            <dl class="u-dl">
+                <dt class="large"><span class="s-red">*</span>邮件：</dt>
+                <dd>
+                  <input type="text" class="u-input u-select-normal">
+                </dd>
+            </dl>
+            </div>
+              </div>
+            </div>-->
+
+            <div >
+              <ul class="m-radio-list">
+                <li class="item j-r-list">
+                  <i class="u-icon u-icon-go j-radio"></i><span class="cc">文件1.txt</span>
+                </li>
+                <li class="item j-r-list">
+                  <i class="u-icon u-icon-go  j-radio"></i><span class="cc">文件2.txt</span>
+                </li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        <div class="m-wrap">
+        <div class="m-c">
+          <div class="m-btn-box">
+            <div class="u-btn btn btn-main">提交</div>
+            <div class="u-btn btn btn-main">取消</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="g-foot"></div>
+
+  <script>
+  function radioLise(){
+    $('.j-r-list').on('click',function(){
+      var $r=$('.j-r-list').find('.j-radio');
+      var $thisR=$(this).find('.j-radio');
+      if($r.hasClass('z-active'))
+         {
+          $r.removeClass('z-active')
+        }
+          $thisR.addClass('z-active')
+
+    })
+  }
+    radioLise();
+  </script>
+</body>
+
+</html>
